@@ -1,8 +1,6 @@
 ---
 title: "Research Projects"
 from: markdown+emoji
-filters:
-  - test_filter.py
 ---
 
 
