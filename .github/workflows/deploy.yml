@@ -1,0 +1,41 @@
+name: render-and-deploy
+
+on:
+  # Trigger the workflow on push to main branch
+  push:
+    branches:
+      - main
+
+jobs:
+  render-and-deploy-quarto-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Set up Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+    
+    - name: Render Quarto site
+      uses: quarto-dev/quarto-actions/render@v2
+      with:
+        to: html
+        path: .
+    
+    - name: Process HTML outputs for nicer site render
+      run: curl -s -S https://gist.githubusercontent.com/AlFontal/233c9ad8afe27e68f23138fcacf2d767/raw > clean_notebook.py; 
+              python clean_notebook.py --path _site
+
+    - name: Deploy to Github Pages
+      uses: peaceiris/actions-gh-pages@v3.9.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: _site
