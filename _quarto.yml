@@ -16,7 +16,7 @@ website:
     left:
       - text: |
           <div class="msca-container">
-          <div class="msca-logo"><img src="assets/ec_logo.jpg" width=70px></div>
+          <div class="msca-logo"><img src="assets/institutional_logos/ec_logo.jpg" width=70px></div>
           <div class="msca-text"><p>This project has received funding from the European Union’s Horizon 2020 research and<br> 
           innovation programme under the Marie Skłodowska-Curie grant agreement No. 813545</p></div>
           </div>
