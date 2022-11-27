@@ -1,0 +1,81 @@
+pre code {
+    font-size: 0.8em
+}
+
+.table {
+  font-size: 0.8em;
+}
+
+p {
+  text-align: justify;
+}
+
+figcaption.figure-caption {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+summary {
+  font-size: 0.8em;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif
+}
+
+header {
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+navbar {
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+body {
+  font-family: Georgia, Cambria,"Times New Roman",Times,serif;
+}
+
+.lead {
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 1.275rem;
+}
+
+.navbar-logo {
+  max-height: 40px;
+}
+
+.navbar-title {
+  font-size: 1.6rem;
+  color: #2E579E;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+}
+
+.menu-text {
+  font-size: 1.25rem;
+}
+
+.nav-footer-center {
+  inherits: nav_footer-left;
+}
+
+.msca-logo {
+  width: 12%;
+  float: left;
+  padding: 5px;
+}  
+
+.msca-text {
+  width: 88%;
+  float: right;
+  padding: 5px;
+}
+
+.left-about {
+  width: 70%;
+  float: left;
+  padding: 5px;
+}
+
+.right-about {
+  width: 30%;
+  float: right;
+  padding: 5px;
+}

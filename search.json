@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html#what-is-helical",
+    "href": "index.html#what-is-helical",
+    "title": "HELICAL",
+    "section": "What is HELICAL?",
+    "text": "What is HELICAL?\nHEalth data LInkage for ClinicAL benefit is a training network comprising 17 academic and 9 non-academic/industry partners for early stage researchers in the field of Healthcare Data Linkage in the GDPR era. European researchers have made leading contributions to the large genomic, transcriptomic and clinical datasets from patients with chronic diseases. Advances in information science provide unprecedented opportunities for using these datasets to elucidate the complex biology of these disorders, its influence by environmental triggers, and to personalise their management.\nExploitation of these opportunities is limited by a shortage of researchers with the required informatics skills and knowledge of requisite data protection principles. HELICAL addresses this unmet need by developing a trans-sectoral and interdisciplinary programme with training in analysis of large datasets, using autoimmune vasculitis as a paradigm, as comprehensive biological and clinical datasets are already available.\nThe programme will be delivered through a partnership of Academic and Industry researchers with expertise in basic biomedical research, epidemiology, statistics, machine learning, health data governance and ethics.\nHELICAL exploits recent advances in data science to link research datasets with longitudinal healthcare records, based on the robust ethical foundation required for linkage studies using near-patient data, to address key experimental questions."
+  },
+  {
+    "objectID": "index.html#what-does-helical-offer",
+    "href": "index.html#what-does-helical-offer",
+    "title": "HELICAL",
+    "section": "What does HELICAL offer?",
+    "text": "What does HELICAL offer?\n\n\n\n\n\nUsing autoimmune vasculitis as a paradigm HELICAL will provide state of the art training in data analysis from large datasets for 15 PhD students.\nThe HELICAL training program focuses on three complementary areas: application of informatics to such datasets to gain new biological insights; translation of biological into practical clinical outputs and identification of the novel ethical constraints imposed on such studies and development of strategies to manage them.\nThe 36-month PhD training program will take place at one of the participating partners with secondments to other partners during this period."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About us",
+    "section": "",
+    "text": "The overall goal of HELICAL is to establish a European training network to prepare the next generation of Health Informatics Researchers. Advances in information science and artificial intelligence provide unprecedented opportunities for using these datasets to elucidate the complex biology of these disorders, how it is influenced by environmental triggers, and to personalise their management. Currently, exploitation of these opportunities is severely limited by the shortage of researchers with the required informatics skills, knowledge of requisite data protection and stewardship principles and understanding of the clinical context.\n\n\n\n\n\n\nHELICAL addresses this unmet need by developing a trans-sectoral and interdisciplinary training programme that builds on the expertise and existing collaborations of its partners. It will use autoimmune vasculitis as a paradigm because it is scalable, the analysis of different forms will allow the influence of age and gender to be assessed, and comprehensive biological and clinical datasets are already available.\nThe HELICAL training programme focuses on three complementary areas:\n\napplication of informatics to such datasets to gain new biological insights.\ntranslation of biological into practical clinical outputs.\nidentification of the novel ethical constraints imposed on such studies and development of strategies to manage them.\n\nThe programme is delivered through a multidisciplinary and trans-sectoral partnership of world-leading researchers from Academia and Industry with expertise in biomedical research, epidemiology, statistics, machine learning, health data governance and ethics."
+  },
+  {
+    "objectID": "about.html#the-esrs",
+    "href": "about.html#the-esrs",
+    "title": "About us",
+    "section": "The ESRs",
+    "text": "The ESRs\n\n\n\n\n\nESR1: Albert Navarro\n\n\n\n \n\n\n\n\nESR2: Anna Weber\n\n\n\n \n\n\n\n\nESR3: Bahareh Khosravi\n\n\n\n\n\n\n\nESR4: Enock Havyarimana\n\n\n\n \n\n\n\n\nESR5: Solange González\n\n\n\n \n\n\n\n\nESR6: Alejandro Fontal\n\n\n\n\n\n\n\nESR7: Elkyn F. Estupiñán\n\n\n\n \n\n\n\n\nESR8: Michal Żułciński\n\n\n\n \n\n\n\n\nESR9: Filippo Guerri\n\n\n\n\n\n\n\nESR10: Farah Kamberović\n\n\n\n \n\n\n\n\nESR11: Małgorzata Małys\n\n\n\n \n\n\n\n\nESR12: Marco Zanet\n\n\n\n\n\n\n\nESR13: Shaghayegh Bayati\n\n\n\n \n\n\n\n\nESR14: Gisela Pattarone\n\n\n\n \n\n\n\n\nESR15: Maria Christofidou"
+  },
+  {
+    "objectID": "about.html#the-consortium",
+    "href": "about.html#the-consortium",
+    "title": "About us",
+    "section": "The Consortium",
+    "text": "The Consortium"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Host \nProject\nSupervisor\n\n\n\n\nESR1\n\nqTCD\nScalable semantic data architecture for study of chronic disease\nDeclan O’Sullivan\n\n\nESR2\n\nIBM\nCross-Domain Data Fusion techniques for vasculitis prediction\nMaría Rodríguez-Martínez\n\n\nESR3\n\nTCD\nEnsemble averaging for complex disease prediction in the large p small n domain from multiple data\nJason Wyse\n\n\nESR4\n\nUGLAS\nHarnessing the power of integrated data to investigate environmental exposures on ANCA vasculitis risk – an unbiased approach\nNeil Basu\n\n\nESR5\n\nKSSG\nFocused study of the environmental impact on development of ANCA vasculitis- a hypothesis driven approach\nAlfred Mahr\n\n\nESR6\n\nISG\nAtmospheric monitoring and time series analysis of climate and pollution impact on vasculitis onset\nXavier Rodó\n\n\nESR7\n\nCSIC\nIdentification of functionally relevant genetic variants associated with GCA\nJavier Martin\n\n\nESR8\n\nULEEDS\nLinking public and GCA datasets to identify novel pathogenic pathways\nAnn Morgan\n\n\nESR9\n\nAX\nSystems biology and bioinformatics approaches to provide a holistic understanding of GCA biology\nJosé Manuel Mas\n\n\nESR10\n\nIDIBAPS\nFunctional characterisation of inflammation and vascular remodelling pathways in GCA\nMaria Cid\n\n\nESR11\n\nMUW\nExtracellular Vesicles (EV) as markers of active disease in AAV\nRenate Kain\n\n\nESR12\n\nTG\nComputer assisted morphometry of pathological changes in renal biopsies from patients with AAV\nRupert Ecker\n\n\nESR13\n\nKTH\nProfiling the autoantibody repertoire in the context of systemic vasculitis flare\nPeter Nilsson\n\n\nESR14\n\nFI\nA novel multi-parametric diagnostic tool for diagnosis of vasculitis\nHueseyin Firat\n\n\nESR15\n\nI-HD\nData management for promoting research while protecting privacy\nPascal Coorevits"
+  }
+]
