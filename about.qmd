@@ -1,0 +1,93 @@
+---
+title: "About us"
+---
+
+
+## The project
+
+::: {layout="[60, 40]"}
+
+ The overall goal of HELICAL is to establish a European training network to prepare the next generation of Health Informatics Researchers. Advances in information science and artificial intelligence provide unprecedented opportunities for using these datasets to elucidate the complex biology of these disorders, how it is influenced by environmental triggers, and to personalise their management. Currently, exploitation of these opportunities is severely limited by the shortage of researchers with the required informatics skills, knowledge of requisite data protection and stewardship principles and understanding of the clinical context.
+
+![](assets/site_images/about_image.jpg){class=.column-body-outset-right}
+:::
+
+HELICAL addresses this unmet need by developing a trans-sectoral and interdisciplinary training programme that builds on the expertise and existing collaborations of its partners. It will use autoimmune vasculitis
+as a paradigm because it is scalable, the analysis of different forms will allow the influence of age and gender to be assessed, and comprehensive biological and clinical datasets are already available.
+
+The HELICAL training programme focuses on three complementary areas:
+
++ application of informatics to such datasets to gain **new biological insights**.
++ translation of biological into **practical clinical outputs**.
++ identification of the **novel ethical constraints** imposed on such studies and development of strategies to manage them.
+
+The programme is delivered through a multidisciplinary and trans-sectoral partnership of world-leading researchers from Academia and Industry with expertise in biomedical research, epidemiology, statistics, machine learning, health data governance and ethics. 
+
+## The ESRs
+
+::: {layout="[[30, -3, 30, -3, 30], [30, -3, 30, -3, 30], [30, -3, 30, -3, 30], [30, -3, 30, -3, 30], [30, -3, 30, -3, 30]]"}
+
+
+[![ESR1: Albert Navarro](assets/esr_pictures/albert_square.png)](ESRs/esr1.qmd)
+
+[![ESR2: Anna Weber](assets/esr_pictures/anna_square.jpg)](ESRs/esr2.qmd)
+
+[![ESR3: Bahareh Khosravi](assets/esr_pictures/bahareh_square.jpg)](ESRs/esr3.qmd)
+
+[![ESR4: Enock Havyarimana](assets/esr_pictures/enock_square.jpg)](ESRs/esr4.qmd)
+
+[![ESR5: Solange González](assets/esr_pictures/solange_square.png)](ESRs/esr5.qmd)
+
+[![ESR6: Alejandro Fontal](assets/esr_pictures/alejandro_square.jpg)](ESRs/esr6.qmd)
+
+[![ESR7: Elkyn F. Estupiñán](assets/esr_pictures/elkyn_square.png)](ESRs/esr7.qmd)
+
+[![ESR8: Michal Żułciński](assets/esr_pictures/michal_square.jpg)](ESRs/esr8.qmd)
+
+[![ESR9: Filippo Guerri](assets/esr_pictures/filippo_square.jpg)](ESRs/esr9.qmd)
+
+[![ESR10: Farah Kamberović](assets/esr_pictures/farah_square.jpg)](ESRs/esr10.qmd)
+
+[![ESR11: Małgorzata Małys](assets/esr_pictures/gosha_square.png)](ESRs/esr11.qmd)
+
+[![ESR12: Marco Zanet](assets/esr_pictures/marco_square.jpeg)](ESRs/esr12.qmd)
+
+[![ESR13: Shaghayegh Bayati](assets/esr_pictures/shaghayegh_square.png)](ESRs/esr13.qmd)
+
+[![ESR14: Gisela Pattarone](assets/esr_pictures/gisela_square.png)](ESRs/esr14.qmd)
+
+[![ESR15: Maria Christofidou](assets/esr_pictures/maria_square.jpg)](ESRs/esr15.qmd)
+
+
+:::
+
+## The Consortium
+
+
+::: {layout="[[25, -3, 25, -3, 25, -3, 25], [25, -3, 25, -3, 25, -3, 25], [25, -3, 25, -3, 25, -3, 25], [25, -3, 25, -3, 25, -3, 25], [25, -3, 25, -3, 25, -3, 25]]"}
+
+[![](assets/institutional_logos/tcd_logo.png)](https://tcd.ie)
+
+[![](assets/institutional_logos/isglobal_logo.png)](isglobal.org)
+
+[![](assets/institutional_logos/adaptcentre.png)](isglobal.org)
+
+[![](assets/institutional_logos/idibaps_logo.jpg)](isglobal.org)
+
+[![](assets/institutional_logos/glasgow_logo.png)](isglobal.org)
+
+[![](assets/institutional_logos/tissuegnostics_logo.jpg)](isglobal.org)
+
+[![](assets/institutional_logos/idival_logo.PNG)](idival.org)
+
+[![](assets/institutional_logos/anaxomics_logo.jpg)](idival.org)
+
+[![](assets/institutional_logos/ibm_logo.jpg)](idival.org)
+
+[![](assets/institutional_logos/leeds_logo.jpg)](idival.org)
+
+[![](assets/institutional_logos/uwien_logo.jpg)](idival.org) 
+
+
+:::
+

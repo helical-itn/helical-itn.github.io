@@ -1,0 +1,28 @@
+---
+title: "HELICAL"
+subtitle: A Marie Skłodowska-Curie Innovative Training Network
+
+---
+
+![](/assets/site_images/intro_image.jpg)
+
+## What is HELICAL?
+
+ HEalth data LInkage for ClinicAL benefit is a training network comprising 17 academic and 9 non-academic/industry partners for early stage researchers in the field of Healthcare Data Linkage in the GDPR era. European researchers have made leading contributions to the large genomic, transcriptomic and clinical datasets from patients with chronic diseases. Advances in information science provide unprecedented opportunities for using these datasets to elucidate the complex biology of these disorders, its influence by environmental triggers, and to personalise their management.
+
+Exploitation of these opportunities is limited by a shortage of researchers with the required informatics skills and knowledge of requisite data protection principles. HELICAL addresses this unmet need by developing a trans-sectoral and interdisciplinary programme with training in analysis of large datasets, using autoimmune vasculitis as a paradigm, as comprehensive biological and clinical datasets are already available.
+
+The programme will be delivered through a partnership of Academic and Industry researchers with expertise in basic biomedical research, epidemiology, statistics, machine learning, health data governance and ethics.
+
+HELICAL exploits recent advances in data science to link research datasets with longitudinal healthcare records, based on the robust ethical foundation required for linkage studies using near-patient data, to address key experimental questions. 
+
+## What does HELICAL offer?
+
+![](/assets/site_images/intro_image_2.jpg){fig-align="center"}
+
+ Using autoimmune vasculitis as a paradigm HELICAL will provide state of the art training in data analysis from large datasets for 15 PhD students.
+
+The HELICAL training program focuses on three complementary areas: application of informatics to such datasets to gain new biological insights; translation of biological into practical clinical outputs and identification of the novel ethical constraints imposed on such studies and development of strategies to manage them.
+
+The 36-month PhD training program will take place at one of the participating partners with secondments to other partners during this period. 
+
