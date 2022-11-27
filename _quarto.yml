@@ -1,0 +1,67 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - about.qmd
+    - projects.qmd
+
+execute: 
+  freeze: true  # We don't want to re-execute notebooks in every build
+
+website:
+  title: " HELICAL"
+  favicon: assets/favicon.png
+  page-footer:
+    border: true
+    left:
+      - text: |
+          <div class="msca-container">
+          <div class="msca-logo"><img src="assets/ec_logo.jpg" width=70px></div>
+          <div class="msca-text"><p>This project has received funding from the European Union’s Horizon 2020 research and<br> 
+          innovation programme under the Marie Skłodowska-Curie grant agreement No. 813545</p></div>
+          </div>
+      
+    right: |
+      Made with {{< fa brands r-project >}}, {{< fa brands python >}} and [Quarto](https://quarto.org/)<br>
+      [View the source at {{< fa brands github >}} GitHub](https://github.com/helical-itn/helical-itn.github.io)
+     
+  navbar:
+    logo: assets/institutional_logos/helical-logo.png
+
+    left:
+      - text: Home
+        href: index.qmd
+      
+      - text: About Us
+        href: about.qmd
+      
+      - text: Research Projects
+        href: projects.qmd
+      - text: "Blog & News"
+        href: blog/index.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/helical-itn
+      - icon: twitter
+        href: https://twitter.com/helicalitn
+      - icon: instagram
+        href: https://www.instagram.com/helicalnetwork/
+      - icon: linkedin
+        href: https://www.linkedin.com/company/helical-itn/
+
+format:
+  html:
+    number-sections: false
+    highlight-style: github
+    theme:
+      light: litera
+    css: custom.css
+    toc: true
+    toc-location: right
+    code-tools: false
+    code-summary: "Show Code"
+
+
+
+
