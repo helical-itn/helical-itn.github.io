@@ -35,7 +35,7 @@ jobs:
     
     - name: Process HTML outputs for nicer site render
       run: curl -s -S https://gist.githubusercontent.com/AlFontal/233c9ad8afe27e68f23138fcacf2d767/raw > clean_notebook.py; 
-              python clean_notebook.py --path site/_site
+              poetry run python clean_notebook.py --path site/_site
 
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3.9.0
