@@ -83,3 +83,33 @@ body {
 table.hide-caption  caption {
   display: none;
 }
+
+.img-profile {
+
+    width: 100%;
+    border-radius: 50%;
+  }
+
+.profile-text {
+  font-size: 1rem;
+
+}
+
+.profile-text a:link {
+  text-decoration: none;
+  color:#2E579E
+}
+
+.profile-text a:visited {
+  text-decoration: none;
+  color:#2E579E
+}
+
+.profile-text a:hover {
+  text-decoration: none;
+  color:#286cdf
+}
+
+.smaller-text {
+  font-size: 0.9rem;
+}

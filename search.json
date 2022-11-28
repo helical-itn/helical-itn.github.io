@@ -75,5 +75,110 @@
     "title": "Registry Data usage (ESR6)",
     "section": "Linkage",
     "text": "Linkage\nThe final linkage, which leads us to the table on which most of the analyses will be made, is based on merging both the environmental and epidemiological daily incidence counts in a single table based on the date and region columns, such that:\n\n\nShow Code\n(environment_df\n .merge(daily_cases, on=['date', 'region'], how='left')\n .fillna(0)\n .assign(cases=lambda df: df.cases.astype(int))\n .sort_values(['region', 'date'])\n .set_index(['region', 'date'])\n)\n\n\n\n\n\n\n  \n    \n      \n      \n      temperature\n      no2\n      fungal_species_1\n      bacterial_species_2\n      cases\n    \n    \n      region\n      date\n      \n      \n      \n      \n      \n    \n  \n  \n    \n      A\n      2021-01-01\n      19.57\n      3.94\n      1010\n      787\n      1\n    \n    \n      2021-01-02\n      11.28\n      6.17\n      1012\n      787\n      1\n    \n    \n      2021-01-03\n      20.92\n      4.01\n      944\n      736\n      1\n    \n    \n      2021-01-04\n      18.71\n      4.37\n      971\n      737\n      3\n    \n    \n      2021-01-05\n      17.30\n      4.76\n      1028\n      821\n      0\n    \n    \n      B\n      2021-01-01\n      24.32\n      4.15\n      946\n      746\n      1\n    \n    \n      2021-01-02\n      15.43\n      5.19\n      1003\n      852\n      4\n    \n    \n      2021-01-03\n      30.20\n      5.76\n      999\n      734\n      1\n    \n    \n      2021-01-04\n      21.85\n      3.68\n      858\n      724\n      2\n    \n    \n      2021-01-05\n      15.03\n      5.57\n      1020\n      793\n      1"
+  },
+  {
+    "objectID": "ESRs/esr1.html",
+    "href": "ESRs/esr1.html",
+    "title": "ESR1: Albert Navarro Gallinad",
+    "section": "",
+    "text": "navarral   LinkedIn   ORCID   albert.navarro@adaptcentre.ie\n\n\n Host Institution  ADAPT Centre, TCD  Supervisor  Declan O’Sullivan \n\n\n\n\nProject Title: Scalable semantic data architecture for study of chronic disease"
+  },
+  {
+    "objectID": "ESRs/esr10.html",
+    "href": "ESRs/esr10.html",
+    "title": "ESR10: Farah Kamberović",
+    "section": "",
+    "text": "LinkedIn   ORCID   farah.kamberovic@gmail.com\n\n\n Host Institution  IDIBAPS  Supervisor  Maria Cid\n\n\n\n\nProject Title: Functional characterisation of inflammation and vascular remodelling pathways in GCA"
+  },
+  {
+    "objectID": "ESRs/esr11.html",
+    "href": "ESRs/esr11.html",
+    "title": "ESR11: Małgorzata Małys",
+    "section": "",
+    "text": "LinkedIn   ORCID   malgorzata.malys@meduniwien.ac.at\n\n\n Host Institution  Medical University of Vienna  Supervisor  Renate Kain\n\n\n\n\nProject Title: Extracellular Vesicles (EV) as markers of active disease in AAV"
+  },
+  {
+    "objectID": "ESRs/esr12.html",
+    "href": "ESRs/esr12.html",
+    "title": "ESR12: Marco Zanet",
+    "section": "",
+    "text": "LinkedIn\n\n\n Host Institution  TissueGnostics  Supervisor  Rupert Ecker\n\n\n\n\nProject Title: Computer assisted morphometry of pathological changes in renal biopsies from patients with AAV"
+  },
+  {
+    "objectID": "ESRs/esr13.html",
+    "href": "ESRs/esr13.html",
+    "title": "ESR13: Shaghayegh Bayati",
+    "section": "",
+    "text": "Bayati2020   LinkedIn   ORCID   shaghayegh.bayati@scilifelab.se\n\n\n Host Institution  Royal Institute of Technology (KTH)  Supervisor  Peter Nilsson\n\n\n\n\nProject Title: Profiling the autoantibody repertoire in the context of systemic vasculitis flare"
+  },
+  {
+    "objectID": "ESRs/esr14.html",
+    "href": "ESRs/esr14.html",
+    "title": "ESR14: Gisela Pattarone",
+    "section": "",
+    "text": "LinkedIn\n\n\n Host Institution  Firalis  Supervisor  Hueseyin Firat\n\n\n\n\nProject Title: A novel multi-parametric diagnostic tool for diagnosis of vasculitis"
+  },
+  {
+    "objectID": "ESRs/esr15.html",
+    "href": "ESRs/esr15.html",
+    "title": "ESR15: Maria Christofidou",
+    "section": "",
+    "text": "LinkedIn   ORCID   maria.christofidou@i-hd.eu\n\n\n Host Institution  I~HD  Supervisor  Pascal Coorevits\n\n\n\n\nProject Title: Data management for promoting research while protecting privacy"
+  },
+  {
+    "objectID": "ESRs/esr2.html",
+    "href": "ESRs/esr2.html",
+    "title": "ESR2: Anna Weber",
+    "section": "",
+    "text": "annaweber209   LinkedIn    ORCID   A92.weber@t-online.de\n\n\n Host Institution  IBM Research  Supervisor  María Rodríguez-Martínez\n\n\n\n\nProject Title: Cross-Domain Data Fusion techniques for vasculitis prediction"
+  },
+  {
+    "objectID": "ESRs/esr3.html",
+    "href": "ESRs/esr3.html",
+    "title": "ESR3: Bahareh Khosravi",
+    "section": "",
+    "text": "BaharehKhosravi65   LinkedIn   ORCID   khosravi.bahareh65@gmail.com\n\n\n Host Institution  TCD  Supervisor  Jason Wyse, Mark Little\n\n\n\n\nProject Title: Ensemble averaging for complex disease prediction in the large p small n domain from multiple data"
+  },
+  {
+    "objectID": "ESRs/esr4.html",
+    "href": "ESRs/esr4.html",
+    "title": "ESR4: Enock Havyarimana",
+    "section": "",
+    "text": "ehavyarimana   LinkedIn   ORCID   ehavyarimana@gmail.com\n\n\n Host Institution  University of Glasgow  Supervisor  Neil Basu\n\n\n\n\nProject Title: Harnessing the power of integrated data to investigate environmental exposures on ANCA vasculitis risk – an unbiased approach"
+  },
+  {
+    "objectID": "ESRs/esr5.html",
+    "href": "ESRs/esr5.html",
+    "title": "ESR5: Solange González Chiappe",
+    "section": "",
+    "text": "Solangegonzalez   ORCID   solangegch@gmail.com\n\n\n Host Institution  Kantonsspital St.Gallen  Supervisor  Alfred Mahr\n\n\n\n\nProject Title: Focused study of the environmental impact on development of ANCA vasculitis- a hypothesis driven approach"
+  },
+  {
+    "objectID": "ESRs/esr6.html",
+    "href": "ESRs/esr6.html",
+    "title": "ESR6: Alejandro Fontal",
+    "section": "",
+    "text": "AlFontal   LinkedIn   ORCID   alejandro.fontal@isglobal.org   alfontal.github.io\n\n\n Host Institution  ISGlobal  Supervisor  Xavier Rodó\n\n\n\n\nProject Title: Atmospheric monitoring and time series analysis of climate and pollution impact on vasculitis onset"
+  },
+  {
+    "objectID": "ESRs/esr7.html",
+    "href": "ESRs/esr7.html",
+    "title": "ESR7: Elkyn Fabián Estupiñán",
+    "section": "",
+    "text": "LinkedIn   ORCID   elfaesmo@ipb.csic.es\n\n\n Host Institution  CSIC  Supervisor  Javier Martín\n\n\n\n\nProject Title: Identification of functionally relevant genetic variants associated with GCA"
+  },
+  {
+    "objectID": "ESRs/esr8.html",
+    "href": "ESRs/esr8.html",
+    "title": "ESR8: Michał Żułciński",
+    "section": "",
+    "text": "mihaux   LinkedIn   ORCID   m.zulcinski@leeds.ac.uk\n\n\n Host Institution  University of Leeds  Supervisor  Ann Morgan\n\n\n\n\nProject Title: Linking public and GCA datasets to identify novel pathogenic pathwaysh"
+  },
+  {
+    "objectID": "ESRs/esr9.html",
+    "href": "ESRs/esr9.html",
+    "title": "ESR9: Filippo Guerri",
+    "section": "",
+    "text": "LinkedIn   filippo.guerri@anaxomics.com\n\n\n Host Institution  Anaxomics  Supervisor  Judith Farrés\n\n\n\n\nProject Title: Systems biology and bioinformatics approaches to provide a holistic understanding of GCA biology"
   }
 ]
