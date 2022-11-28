@@ -1,0 +1,12 @@
+---
+title: "HELICAL Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+---
+
+Welcome to the HELICAL Blog! 
+
+Here you can find the latest news and updates about the project.

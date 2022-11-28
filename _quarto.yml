@@ -4,6 +4,7 @@ project:
     - index.qmd
     - about.qmd
     - projects.qmd
+    - blog/index.qmd
 
 execute: 
   freeze: true  # We don't want to re-execute notebooks in every build
