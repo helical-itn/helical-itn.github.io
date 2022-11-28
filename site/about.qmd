@@ -68,25 +68,42 @@ The programme is delivered through a multidisciplinary and trans-sectoral partne
 
 [![](assets/institutional_logos/tcd_logo.png)](https://tcd.ie)
 
-[![](assets/institutional_logos/isglobal_logo.png)](isglobal.org)
+[![](assets/institutional_logos/isglobal_logo.png)](https://isglobal.org)
 
-[![](assets/institutional_logos/adaptcentre.png)](isglobal.org)
+[![](assets/institutional_logos/adaptcentre.png)](https://www.adaptcentre.ie/)
 
-[![](assets/institutional_logos/idibaps_logo.jpg)](isglobal.org)
+[![](assets/institutional_logos/idibaps_logo.jpg)](https://www.idibaps.org)
 
-[![](assets/institutional_logos/glasgow_logo.png)](isglobal.org)
+[![](assets/institutional_logos/glasgow_logo.png)](https://www.gla.ac.uk/)
 
-[![](assets/institutional_logos/tissuegnostics_logo.jpg)](isglobal.org)
+[![](assets/institutional_logos/tissuegnostics_logo.jpg)](https://www.tissuegnostics.com)
 
-[![](assets/institutional_logos/idival_logo.PNG)](idival.org)
+[![](assets/institutional_logos/idival_logo.PNG)](https://idival.org)
 
-[![](assets/institutional_logos/anaxomics_logo.jpg)](idival.org)
+[![](assets/institutional_logos/anaxomics_logo.jpg)](https://www.anaxomics.com)
 
-[![](assets/institutional_logos/ibm_logo.jpg)](idival.org)
+[![](assets/institutional_logos/ibm_logo.jpg)](https://www.zurich.ibm.com/)
 
-[![](assets/institutional_logos/leeds_logo.jpg)](idival.org)
+[![](assets/institutional_logos/leeds_logo.jpg)](https://lida.leeds.ac.uk/target)
 
-[![](assets/institutional_logos/uwien_logo.jpg)](idival.org) 
+[![](assets/institutional_logos/uwien_logo.jpg)](https://www.meduniwien.ac.at) 
+
+[![](assets/institutional_logos/csic_logo.jpg)](https://www.ipb.csic.es) 
+
+[![](assets/institutional_logos/eaglegenomics_logo.png)](https://www.eaglegenomics.com/) 
+
+[![](assets/institutional_logos/kth_logo.png)](https://www.kth.se/en) 
+
+
+[![](assets/institutional_logos/uab_logo.jpg)](https://www.uab.cat/) 
+
+[![](assets/institutional_logos/ub_logo.jpg)](https://www.ub.edu/) 
+
+[![](assets/institutional_logos/st_gallen_logo.jpg)](https://www.kssg.ch/) 
+
+[![](assets/institutional_logos/firalis_logo.png)](https://www.firalis.com/) 
+
+[![](assets/institutional_logos/i_hd_logo.jpg)](https://www.i-hd.eu/)
 
 
 :::
