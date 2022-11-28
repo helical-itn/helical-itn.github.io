@@ -6,6 +6,10 @@ project:
     - projects.qmd
     - blog/index.qmd
     - blog/posts/*
+    
+comments:
+  giscus: 
+    repo: helical-itn/helical-itn.github.io
 
 execute: 
   freeze: true  # We don't want to re-execute notebooks in every build
