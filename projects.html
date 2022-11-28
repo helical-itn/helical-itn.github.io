@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research Projects</span></a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="./blog/index.qmd">
+<a class="nav-link" href="./blog/index.html">
 <span class="menu-text">Blog &amp; News</span></a>
 </li>
 </ul>
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
 </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <header class="quarto-title-block default" id="title-block-header">
 <div class="quarto-title">
 <h1 class="title">Research Projects</h1>
@@ -133,12 +133,21 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 </div>
 </header>
-<table class="table">
+<div class="column-body-outset">
+<table class="table-striped table-hover hide-caption table-responsive table">
+<caption>{.table-striped.table-hover.hide-caption.table-responsive}</caption>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 9%"/>
+<col style="width: 13%"/>
+<col style="width: 39%"/>
+<col style="width: 25%"/>
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;"></th>
-<th style="text-align: left;">Host </th>
+<th style="text-align: left;">  Host</th>
 <th>Project</th>
 <th>Supervisor</th>
 </tr>
@@ -147,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td style="text-align: left;"><strong>ESR1</strong></td>
 <td style="text-align: left;"><img height="18" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg" width="25"/></td>
-<td style="text-align: left;">q<a href="https://www.adaptcentre.ie">TCD</a></td>
+<td style="text-align: left;"><a href="https://www.adaptcentre.ie">TCD</a></td>
 <td>Scalable semantic data architecture for study of chronic disease</td>
 <td>Declan O’Sullivan</td>
 </tr>
@@ -182,21 +191,21 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td style="text-align: left;"><strong>ESR6</strong></td>
 <td style="text-align: left;"><img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Bandera_de_Espa%C3%B1a.svg" width="25"/></td>
-<td style="text-align: left;"><a href="https://www.isglobal.org/">ISG</a></td>
+<td style="text-align: left;"><a href="https://www.isglobal.org/">ISGlobal</a></td>
 <td>Atmospheric monitoring and time series analysis of climate and pollution impact on vasculitis onset</td>
 <td>Xavier Rodó</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>ESR7</strong></td>
 <td style="text-align: left;"><img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Bandera_de_Espa%C3%B1a.svg" width="25"/></td>
-<td style="text-align: left;"><a href="www.ipb.csic.es/">CSIC</a></td>
+<td style="text-align: left;"><a href="www.ipb.csic.es">CSIC</a></td>
 <td>Identification of functionally relevant genetic variants associated with GCA</td>
 <td>Javier Martin</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>ESR8</strong></td>
 <td style="text-align: left;"><img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" width="25"/></td>
-<td style="text-align: left;"><a href="https://lida.leeds.ac.uk/target/">ULEEDS</a></td>
+<td style="text-align: left;"><a href="https://lida.leeds.ac.uk/target">ULEEDS</a></td>
 <td>Linking public and GCA datasets to identify novel pathogenic pathways</td>
 <td>Ann Morgan</td>
 </tr>
@@ -251,6 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</div>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

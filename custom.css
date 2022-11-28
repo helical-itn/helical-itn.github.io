@@ -79,3 +79,7 @@ body {
   float: right;
   padding: 5px;
 }
+
+table.hide-caption  caption {
+  display: none;
+}
