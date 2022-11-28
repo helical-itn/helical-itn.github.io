@@ -13,14 +13,17 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v3
 
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v1
+    - name: Install poetry
+      run: pipx install poetry
+
+    - name: Set up Python and cache poetry dependencies
+      uses: actions/setup-python@v4
       with:
         python-version: 3.10.8
-
+        cache: poetry
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      run: poetry install --no-root
+
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
     
