@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-subtitle','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="WP1">WP1 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data">data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="environment">environment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="exposure">exposure <span class="quarto-category-count">(1)</span></div><div class="category" data-category="health">health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="registry">registry <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -196,7 +196,53 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-
+<div class="quarto-post image-right" data-index="0" data-categories="WP1,python,data,registry,health,environment,exposure" data-listing-file-modified-sort="1669648045079" data-listing-reading-time-sort="1.365">
+<div class="body">
+<a href="../blog/posts/esr6_data_example.html">
+<h3 class="no-anchor listing-title">
+Registry Data usage (ESR6)
+</h3>
+<div class="listing-subtitle">
+How do we link health registry data to environmental exposures?
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('WP1'); return false;">
+WP1
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
+data
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('registry'); return false;">
+registry
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('health'); return false;">
+health
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('environment'); return false;">
+environment
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('exposure'); return false;">
+exposure
+</div>
+</div>
+<a href="../blog/posts/esr6_data_example.html">
+<div class="listing-description">
+I will use this blog post as a way to showcase the basic usage of registry data and linkage to environmental data typically…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../blog/posts/esr6_data_example.html">
+<div class="listing-author">
+<b>ESR6</b>: Alejandro Fontal
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

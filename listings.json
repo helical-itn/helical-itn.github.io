@@ -1,6 +1,8 @@
 [
   {
     "listing": "/blog/index.html",
-    "items": []
+    "items": [
+      "/blog/posts/esr6_data_example.html"
+    ]
   }
 ]

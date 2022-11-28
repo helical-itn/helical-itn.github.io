@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="ESR6: Alejandro Fontal">
+
+<title>HELICAL - Registry Data usage (ESR6)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../custom.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/institutional_logos/helical-logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">HELICAL</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html">
+ <span class="menu-text">Research Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html">
+ <span class="menu-text">Blog &amp; News</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/helical-itn"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/helicalitn"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/helicalnetwork/"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/helical-itn/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#environmental-dataset" id="toc-environmental-dataset" class="nav-link" data-scroll-target="#environmental-dataset">Environmental dataset</a></li>
+  <li><a href="#healthcare-records-dataset" id="toc-healthcare-records-dataset" class="nav-link" data-scroll-target="#healthcare-records-dataset">Healthcare records dataset</a></li>
+  <li><a href="#linkage" id="toc-linkage" class="nav-link" data-scroll-target="#linkage">Linkage</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Registry Data usage (ESR6)</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<p class="subtitle lead">How do we link health registry data to environmental exposures?</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">WP1</div>
+    <div class="quarto-category">python</div>
+    <div class="quarto-category">data</div>
+    <div class="quarto-category">registry</div>
+    <div class="quarto-category">health</div>
+    <div class="quarto-category">environment</div>
+    <div class="quarto-category">exposure</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><b>ESR6</b>: Alejandro Fontal <a href="https://orcid.org/0000-0003-1689-0557" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>I will use this blog post as a way to showcase the basic usage of registry data and linkage to environmental data typically done as part of my work as a member of HELICAL’S Work Package 1, whose main objective is to help understand the relationship between environmental exposures and vasculitis onset.</p>
+<p>I will try to display a simplified example of my usage of healthcare registries data. I make use of individual data just as a basis to aggregate and obtain incidence counts per <em>spatial unit</em> (zip-code, province, electoral district) and <em>time-unit</em> (daily, weekly, monthly) based on each patients residence and date of onset/diagnosis information.</p>
+<p>To illustrate the linkage process I will generate an environmental and healthcare record toy dataset and perform the linkage as I usually would:</p>
+<details>
+<summary>
+Show Python Imports
+</summary>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:29.236097Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:28.943959Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="environmental-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-dataset">Environmental dataset</h2>
+<p>In general, I fetch different datasets of publicly available or self-generated daily observations of several environmental variables: + Weather + Pollution + Biological air diversity + Chemical composition (via LIDAR or inplace sampling).</p>
+<p>A toy example would be the following table, spanning only 5 days for two different regions, A and B:</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:30.855613Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:30.818967Z&quot;}" data-execution_count="17">
+<details>
+<summary>Show Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment_df <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    date<span class="op">=</span>np.repeat(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">2</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    region<span class="op">=</span>np.tile([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">5</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    temperature<span class="op">=</span>np.random.normal(<span class="dv">20</span>, <span class="dv">5</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    no2<span class="op">=</span>np.random.normal(<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    fungal_species_1<span class="op">=</span>np.random.normal(<span class="dv">1000</span>, <span class="dv">100</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    bacterial_species_2<span class="op">=</span>np.random.normal(<span class="dv">750</span>, <span class="dv">75</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>)))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>environment_df.set_index(<span class="st">'date'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="17">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>region</th>
+      <th>temperature</th>
+      <th>no2</th>
+      <th>fungal_species_1</th>
+      <th>bacterial_species_2</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-01-01</th>
+      <td>A</td>
+      <td>19.57</td>
+      <td>3.94</td>
+      <td>1010</td>
+      <td>787</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>B</td>
+      <td>24.32</td>
+      <td>4.15</td>
+      <td>946</td>
+      <td>746</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>A</td>
+      <td>11.28</td>
+      <td>6.17</td>
+      <td>1012</td>
+      <td>787</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>B</td>
+      <td>15.43</td>
+      <td>5.19</td>
+      <td>1003</td>
+      <td>852</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>A</td>
+      <td>20.92</td>
+      <td>4.01</td>
+      <td>944</td>
+      <td>736</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>B</td>
+      <td>30.20</td>
+      <td>5.76</td>
+      <td>999</td>
+      <td>734</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>A</td>
+      <td>18.71</td>
+      <td>4.37</td>
+      <td>971</td>
+      <td>737</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>B</td>
+      <td>21.85</td>
+      <td>3.68</td>
+      <td>858</td>
+      <td>724</td>
+    </tr>
+    <tr>
+      <th>2021-01-05</th>
+      <td>A</td>
+      <td>17.30</td>
+      <td>4.76</td>
+      <td>1028</td>
+      <td>821</td>
+    </tr>
+    <tr>
+      <th>2021-01-05</th>
+      <td>B</td>
+      <td>15.03</td>
+      <td>5.57</td>
+      <td>1020</td>
+      <td>793</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="healthcare-records-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="healthcare-records-dataset">Healthcare records dataset</h2>
+<p>The minimal example of a healthcare records dataset that I use would contain, at the individual level, the patient’s residence region, and the (vasculitis) onset date recorded.</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:33.870139Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:33.849211Z&quot;}" data-execution_count="4">
+<details>
+<summary>Show Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>healthcare_records <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    patient_id<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">16</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    region<span class="op">=</span>np.random.choice([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">15</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    onset_date<span class="op">=</span>np.random.choice(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">15</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>healthcare_records.set_index(<span class="st">'patient_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>region</th>
+      <th>onset_date</th>
+    </tr>
+    <tr>
+      <th>patient_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>B</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>A</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>B</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>A</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>B</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>B</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>B</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>A</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>B</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>A</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>B</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>B</td>
+      <td>2021-01-04</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p>I then go from individual level record to population level records aggregating by date and region, such that the data table I use looks like the following:</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:35.715531Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:35.687522Z&quot;}" data-execution_count="18">
+<details>
+<summary>Show Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>daily_cases <span class="op">=</span> (healthcare_records</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>             .groupby([<span class="st">'onset_date'</span>, <span class="st">'region'</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             .size()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>             .rename(<span class="st">'cases'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>             .astype(<span class="bu">int</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>             .reset_index()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             .rename(columns<span class="op">=</span>{<span class="st">'onset_date'</span>: <span class="st">'date'</span>})</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>daily_cases.set_index(<span class="st">'date'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="18">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>region</th>
+      <th>cases</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-01-01</th>
+      <td>A</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>B</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>A</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>B</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>A</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>B</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>A</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>B</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2021-01-05</th>
+      <td>B</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="linkage" class="level2">
+<h2 class="anchored" data-anchor-id="linkage">Linkage</h2>
+<p>The final linkage, which leads us to the table on which most of the analyses will be made, is based on merging both the environmental and epidemiological daily incidence counts in a single table based on the <code>date</code> and <code>region</code> columns, such that:</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:38.021508Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:37.996168Z&quot;}" data-execution_count="25">
+<details>
+<summary>Show Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(environment_df</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> .merge(daily_cases, on<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'region'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> .fillna(<span class="dv">0</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> .assign(cases<span class="op">=</span><span class="kw">lambda</span> df: df.cases.astype(<span class="bu">int</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> .sort_values([<span class="st">'region'</span>, <span class="st">'date'</span>])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> .set_index([<span class="st">'region'</span>, <span class="st">'date'</span>])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="25">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>temperature</th>
+      <th>no2</th>
+      <th>fungal_species_1</th>
+      <th>bacterial_species_2</th>
+      <th>cases</th>
+    </tr>
+    <tr>
+      <th>region</th>
+      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">A</th>
+      <th>2021-01-01</th>
+      <td>19.57</td>
+      <td>3.94</td>
+      <td>1010</td>
+      <td>787</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>11.28</td>
+      <td>6.17</td>
+      <td>1012</td>
+      <td>787</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>20.92</td>
+      <td>4.01</td>
+      <td>944</td>
+      <td>736</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>18.71</td>
+      <td>4.37</td>
+      <td>971</td>
+      <td>737</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2021-01-05</th>
+      <td>17.30</td>
+      <td>4.76</td>
+      <td>1028</td>
+      <td>821</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">B</th>
+      <th>2021-01-01</th>
+      <td>24.32</td>
+      <td>4.15</td>
+      <td>946</td>
+      <td>746</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-02</th>
+      <td>15.43</td>
+      <td>5.19</td>
+      <td>1003</td>
+      <td>852</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>30.20</td>
+      <td>5.76</td>
+      <td>999</td>
+      <td>734</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>21.85</td>
+      <td>3.68</td>
+      <td>858</td>
+      <td>724</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2021-01-05</th>
+      <td>15.03</td>
+      <td>5.57</td>
+      <td>1020</td>
+      <td>793</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <div class="msca-container">
+<div class="msca-logo"><img src="https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/institutional_logos/ec_logo.jpg?raw=true" width="70px"></div>
+<div class="msca-text"><p>This project has received funding from the European Union’s Horizon 2020 research and<br> 
+innovation programme under the Marie Skłodowska-Curie grant agreement No. 813545</p></div>
+</div>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <i class="fa-brands fa-python" aria-label="python"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/helical-itn/helical-itn.github.io">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
