@@ -3,3 +3,6 @@ _extensions/*
 _site/*
 .Rproj.user/*
 **/.DS_Store
+/.luarc.json
+/.quarto/
+**/.Rhistory
