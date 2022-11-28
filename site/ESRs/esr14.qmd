@@ -1,0 +1,21 @@
+---
+title: "ESR14: Gisela Pattarone"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/gisela_square.png?raw=true){.img-profile}
+
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/giselapattarone)<br>
+
+
+{{< fa building-columns >}} **Host Institution** <br> Firalis <br>
+**Supervisor** <br> Hueseyin Firat
+
+::: 
+
+---
+
+**Project Title**: *A novel multi-parametric diagnostic tool for diagnosis of vasculitis*

@@ -1,0 +1,22 @@
+---
+title: "ESR10: Farah Kamberović"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/farah_square.jpg?raw=true){.img-profile}
+
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/farah-kamberovic-b21963174/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0001-8444-0342)<br>
+{{< fa envelope >}} \ [farah.kamberovic@gmail.com](mailto:farah.kamberovic@gmail.com)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> IDIBAPS <br>
+**Supervisor** <br> Maria Cid
+
+::: 
+
+---
+
+**Project Title**: *Functional characterisation of inflammation and vascular remodelling pathways in GCA*

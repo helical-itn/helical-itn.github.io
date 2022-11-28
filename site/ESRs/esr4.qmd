@@ -1,0 +1,23 @@
+---
+title: "ESR4: Enock Havyarimana"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/enock_square.jpg?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [ehavyarimana](https://github.com/ehavyarimana)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/enock-havyarimana-543ba471/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0001-6185-8607)<br>
+{{< fa envelope >}} \ [ehavyarimana@gmail.com](mailto:ehavyarimana@gmail.com)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> University of Glasgow <br>
+**Supervisor** <br> Neil Basu 
+
+::: 
+
+---
+
+**Project Title**: *Harnessing the power of integrated data to investigate environmental exposures on ANCA vasculitis risk – an unbiased approach*

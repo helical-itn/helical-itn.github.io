@@ -1,0 +1,23 @@
+---
+title: "ESR1: Albert Navarro Gallinad"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/albert_square.png?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [navarral](https://github.com/navarral)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/alfontal/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-2336-753X)<br>
+{{< fa envelope >}} \ [albert.navarro@adaptcentre.ie](mailto:albert.navarro@adaptcentre.ie)
+
+{{< fa building-columns >}} **Host Institution** <br> ADAPT Centre, TCD <br>
+**Supervisor** <br> Declan O'Sullivan <br>
+
+:::
+
+---
+
+**Project Title**: *Scalable semantic data architecture for study of chronic disease*

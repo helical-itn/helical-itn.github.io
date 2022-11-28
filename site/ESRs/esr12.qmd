@@ -1,0 +1,20 @@
+---
+title: "ESR12: Marco Zanet"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/marco_square.jpeg?raw=true){.img-profile}
+
+{{< fa brands linkedin >}}\  [LinkedIn](https://linkedin.com/in/zanetm)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> TissueGnostics <br>
+**Supervisor** <br> Rupert Ecker
+
+::: 
+
+---
+
+**Project Title**: *Computer assisted morphometry of pathological changes in renal biopsies from patients with AAV*

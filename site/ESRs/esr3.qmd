@@ -1,0 +1,23 @@
+---
+title: "ESR3: Bahareh Khosravi"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/bahareh_square.jpg?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [BaharehKhosravi65](https://github.com/BaharehKhosravi65)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/bahareh-khosravi-bbba3783/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-5461-3430)<br>
+{{< fa envelope >}} \ [khosravi.bahareh65@gmail.com](mailto:khosravi.bahareh65@gmail.com)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> TCD <br>
+**Supervisor** <br> Jason Wyse, Mark Little
+
+::: 
+
+---
+
+**Project Title**: *Ensemble averaging for complex disease prediction in the large p small n domain from multiple data*

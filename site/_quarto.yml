@@ -6,6 +6,7 @@ project:
     - projects.qmd
     - blog/index.qmd
     - blog/posts/*
+    - ESRs/*
 
 execute: 
   freeze: true  # We don't want to re-execute notebooks in every build

@@ -1,0 +1,22 @@
+---
+title: "ESR15: Maria Christofidou"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/maria_square.jpg?raw=true){.img-profile}
+
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/maria-christofidou-64481399/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-0873-1161)<br>
+{{< fa envelope >}} \ [maria.christofidou@i-hd.eu](mailto:maria.christofidou@i-hd.eu)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> I~HD <br>
+**Supervisor** <br> Pascal Coorevits
+
+::: 
+
+---
+
+**Project Title**: *Data management for promoting research while protecting privacy*

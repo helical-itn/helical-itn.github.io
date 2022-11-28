@@ -1,0 +1,23 @@
+---
+title: "ESR8: Michał Żułciński"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/michal_square.jpg?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [mihaux](https://github.com/mihaux)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/micha%C5%82-%C5%BCu%C5%82ci%C5%84ski-0a58bb130/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0003-4570-1882)<br>
+{{< fa envelope >}} \ [m.zulcinski@leeds.ac.uk](mailto:m.zulcinski@leeds.ac.uk)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> University of Leeds <br>
+**Supervisor** <br> Ann Morgan 
+
+::: 
+
+---
+
+**Project Title**: *Linking public and GCA datasets to identify novel pathogenic pathwaysh*

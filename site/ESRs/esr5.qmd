@@ -1,0 +1,22 @@
+---
+title: "ESR5: Solange González Chiappe"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/solange_square.png?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [Solangegonzalez](https://github.com/Solangegonzalez)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0001-9013-5088)<br>
+{{< fa envelope >}} \ [solangegch@gmail.com](mailto:solangegch@gmail.com)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> Kantonsspital St.Gallen <br>
+**Supervisor** <br> Alfred Mahr 
+
+::: 
+
+---
+
+**Project Title**: *Focused study of the environmental impact on development of ANCA vasculitis- a hypothesis driven approach*

@@ -1,0 +1,23 @@
+---
+title: "ESR13: Shaghayegh Bayati"
+---
+
+---
+
+:::{layout="[30, 60, 50]" .profile-text}
+
+![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/shaghayegh_square.png?raw=true){.img-profile}
+
+{{< fa brands github >}} \ [Bayati2020](https://github.com/Bayati2020)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/shaghayegh-bayati-772b20b6/)<br>
+{{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-3745-4570)<br>
+{{< fa envelope >}} \ [shaghayegh.bayati@scilifelab.se](mailto:shaghayegh.bayati@scilifelab.se)<br>
+
+{{< fa building-columns >}} **Host Institution** <br> Royal Institute of Technology (KTH) <br>
+**Supervisor** <br> Peter Nilsson
+
+::: 
+
+---
+
+**Project Title**: *Profiling the autoantibody repertoire in the context of systemic vasculitis flare*
