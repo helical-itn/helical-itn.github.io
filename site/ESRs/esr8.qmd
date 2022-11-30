@@ -6,7 +6,7 @@ title: "ESR8: Michał Żułciński"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/michal_square.jpg?raw=true){.img-profile}
+![](../assets/esr_pictures/michal_square.jpg){.img-profile}
 
 {{< fa brands github >}} \ [mihaux](https://github.com/mihaux)<br>
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/micha%C5%82-%C5%BCu%C5%82ci%C5%84ski-0a58bb130/)<br>

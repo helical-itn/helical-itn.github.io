@@ -6,7 +6,7 @@ title: "ESR7: Elkyn Fabián Estupiñán"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/elkyn_square.png?raw=true){.img-profile}
+![](../assets/esr_pictures/elkyn_square.png){.img-profile}
 
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/elkyn-fabi%C3%A1n-estupi%C3%B1%C3%A1n-moreno-25214116a/)<br>
 {{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-5818-4389)<br>

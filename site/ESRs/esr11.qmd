@@ -6,7 +6,7 @@ title: "ESR11: Małgorzata Małys"
 
 :::{layout="[30, 60, 50]" .profile-text .smaller-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/gosha_square.png?raw=true){.img-profile}
+![](../assets/esr_pictures/gosha_square.png){.img-profile}
 
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/ma%C5%82gorzata-ma%C5%82ys-b90394131/)<br>
 {{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-4584-3445)<br>

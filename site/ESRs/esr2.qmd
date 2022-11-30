@@ -6,7 +6,7 @@ title: "ESR2: Anna Weber"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/anna_square.jpg?raw=true){.img-profile}
+![](../assets/esr_pictures/anna_square.jpg){.img-profile}
 
 {{< fa brands github >}} \ [annaweber209](https://github.com/annaweber209)<br>
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/anna-weber-9a7b161a0/) <br>

@@ -6,7 +6,7 @@ title: "ESR3: Bahareh Khosravi"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/bahareh_square.jpg?raw=true){.img-profile}
+![](../assets/esr_pictures/bahareh_square.jpg){.img-profile}
 
 {{< fa brands github >}} \ [BaharehKhosravi65](https://github.com/BaharehKhosravi65)<br>
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/bahareh-khosravi-bbba3783/)<br>

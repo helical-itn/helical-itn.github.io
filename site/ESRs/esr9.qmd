@@ -6,7 +6,7 @@ title: "ESR9: Filippo Guerri"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/filippo_square.jpg?raw=true){.img-profile}
+![](../assets/esr_pictures/filippo_square.jpg){.img-profile}
 
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/filippo-guerri-222695132/)<br>
 {{< fa envelope >}} \ [ filippo.guerri@anaxomics.com](mailto: filippo.guerri@anaxomics.com)<br>

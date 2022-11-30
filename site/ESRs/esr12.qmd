@@ -6,7 +6,7 @@ title: "ESR12: Marco Zanet"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/marco_square.jpeg?raw=true){.img-profile}
+![](../assets/esr_pictures/marco_square.jpeg){.img-profile}
 
 {{< fa brands linkedin >}}\  [LinkedIn](https://linkedin.com/in/zanetm)<br>
 

@@ -6,7 +6,8 @@ title: "ESR6: Alejandro Fontal"
 
 :::{layout="[30, 60, 50]" .profile-text}
 
-![](https://github.com/helical-itn/helical-itn.github.io/blob/main/site/assets/esr_pictures/alejandro_square.jpg?raw=true){.img-profile}
+
+![](../assets/esr_pictures/alejandro_square.jpg){.img-profile}
 
 {{< fa brands github >}} \ [AlFontal](https://github.com/AlFontal)<br>
 {{< fa brands linkedin >}}\  [LinkedIn](https://linkedin.com/in/AlFontal)<br>
