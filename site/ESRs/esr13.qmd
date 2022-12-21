@@ -21,3 +21,17 @@ title: "ESR13: Shaghayegh Bayati"
 ---
 
 **Project Title**: *Profiling the autoantibody repertoire in the context of systemic vasculitis flare*
+
+Shaghayegh Bayati is an Early Stage Researcher based in Royal Institute of Technology (KTH) in Sweden. She finished her bachelor’s degree in Molecular and Cellular Biology at Azad University of Tehran in Iran and completed her M.Sc from University of Milan in Molecular Biology of the Cells.
+
+
+She is a Ph.D. student at the Autoimmunity Profiling group of Professor Peter Nilsson that is devoted to affinity proteomics based biomarker discovery and validations at SciLifelab, a Swedish national research center. Her major focus is exploring the auto-antibody repertoires in plasma and identify specific autoantigens associated with vasculitis flare in ANCA Associated Vasculitis (AAV) using in-house produced microarrays with 42,000 protein fragments representing 19,000 unique proteins within HELICAL.
+
+Shaghayegh is also a member of Human Protein Atlas (HPA), a Swedish-based program with the aim to map all the human proteins in the cells, tissues and organs using various omics technologies.
+
+
+---
+
+Check the video below to see a 15 second explanation of Shaghayegh's project by herself:
+
+{{< video https://youtu.be/UAY6f-s915E >}}

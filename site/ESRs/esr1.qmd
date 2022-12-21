@@ -21,3 +21,16 @@ title: "ESR1: Albert Navarro Gallinad"
 ---
 
 **Project Title**: *Scalable semantic data architecture for study of chronic disease*
+
+
+Albert Navarro Gallinad is our Early Stage Researcher (ESR) based at the ADAPT centre in Trinity College Dublin.
+
+His principal research interests lie in the data aspects (suitability, access and retrieval) to support research in the environmental effects on human health.
+
+He will design a series of steps to help clinician researchers explore environmental data to understand and support rare chronic disease research, which will be evaluated through the ANCA vasculitis in Ireland case study.
+
+---
+
+Check the video below to see a 15 second explanation of Albert's project by himself:
+
+{{< video https://youtu.be/EnX20K0Q4vc >}}

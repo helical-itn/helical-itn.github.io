@@ -19,3 +19,12 @@ title: "ESR9: Filippo Guerri"
 ---
 
 **Project Title**: *Systems biology and bioinformatics approaches to provide a holistic understanding of GCA biology*
+
+Filippo is an Early Stage Researcher based at Anaxomics SL in Barcelona and a Bioinformatics PhD Student at Universitat Autònoma de Barcelona. His main research regards the study of machine learning methods applied to both molecular and clinical dataset.
+
+The aim of his project is to develope a pipeline capable to extract relevant biological knowledge related to Giant Cell Arteritis, identifying novel biomarkers and drug targets. 
+---
+
+Check the video below to see a 15 second explanation of Filippo's project by himself:
+
+{{< video https://youtu.be/OvQrnaHtYoU >}}

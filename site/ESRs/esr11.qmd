@@ -20,3 +20,21 @@ title: "ESR11: Małgorzata Małys"
 ---
 
 **Project Title**: *Extracellular Vesicles (EV) as markers of active disease in AAV*
+
+
+Małgorzata Małys is an early stage researcher in Immunopathology group of Professor Renate Kain. She graduated from Medical University of Wroclaw with the master’s degree as a laboratory diagnostician (2012-2017).
+
+Further on she participated as an apprentice in the project related to brain ischaemia in IIBB- CSIC in Barcelona (2017). During her short career in clinical laboratory (2017 and 2019) she gained the knowledge of routine diagnostics.
+
+In 2019 she applied to the Marie Skłodowska-Curie Grant named HELICAL, which she is consequently working on.
+
+Her current project is regarded to exosomes, which may potentially become biomarkers of ANCA-associated vasculitis. To successfully finalise it, she verifies the exosome purity extracted from different tissue cultures and human biofluids together with protein surface analysis.
+
+The techniques she applies are: immunoblotting, immunofluorescence, cell culture, microscopy, nanoparticles tracking analysis and chemical assays.
+
+
+---
+
+Check the video below to see a 15 second explanation of Małgorzata's project by herself:
+
+{{< video https://youtu.be/bqNOsYkAVsg >}}

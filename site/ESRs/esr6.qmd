@@ -23,3 +23,25 @@ title: "ESR6: Alejandro Fontal"
 ---
 
 **Project Title**: *Atmospheric monitoring and time series analysis of climate and pollution impact on vasculitis onset*
+
+
+Alejandro is part of the HELICAL project as an Early Stage Researcher based in the Barcelona Institute for Global Health (ISGlobal) and enrolled as a PhD student in Biotechnology in the University of Barcelona.
+
+Alejandro completed a BSc in Biotechnology at University of Barcelona before moving to the Netherlands to pursue an MSc in Bioinformatics at Wageningen University & Research, specializing in machine learning and data science.
+
+Later on, and before joining the HELICAL project, he worked as a data scientist for the R&D department of DuPont Nutrition and Biosciences in the Netherlands, where he focused on machine learning aided engineering of industrial enzymes.
+
+His PhD project consists on:
+
+(1) understanding the epidemiological dynamics of ANCA-associated Vasculitis and related autoimmune vasculitides by applying time-series and spatial analyses to uncover their spatio-temporal patterns, 
+
+(2) unveiling their potential environmental (physical, chemical and biological) triggers based on historical datasets, medical records and air sampling campaigns and 
+
+(3) developing and improving the characterization methods of biological aerosol particles via the use of machine learning methods.
+
+
+---
+
+Check the video below to see a 15 second explanation of Alejandro's project by himself:
+
+{{< video https://youtu.be/EzMA-br6_RU >}}

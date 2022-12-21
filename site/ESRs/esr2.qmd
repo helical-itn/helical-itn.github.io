@@ -21,3 +21,15 @@ title: "ESR2: Anna Weber"
 ---
 
 **Project Title**: *Cross-Domain Data Fusion techniques for vasculitis prediction*
+
+Anna Weber is an Early Stage Researcher in the Computational Systems Biology group at IBM Research Zurich and a PhD student at ETH Zurich.
+
+Her research is focused on building stochastical and machine learning models of the immune system, in particular in the context of autoimmune diseases. She has received BSc. degrees in both Physics and Molecular Medicine, as well as a MSc. degree in Biophysics and Biochemistry, from the University of Freiburg.
+
+In general, her research interests lie in answering medical questions through computational or mathematical methods.
+
+---
+
+Check the video below to see a 15 second explanation of Anna's project by herself:
+
+{{< video https://youtu.be/5j4E1Ia416Q >}}

@@ -21,3 +21,16 @@ title: "ESR8: Michał Żułciński"
 ---
 
 **Project Title**: *Linking public and GCA datasets to identify novel pathogenic pathwaysh*
+
+
+Michał is an Early Stage Researcher based at the University of Leeds (UK). He holds a bachelor’s degree in Biotechnology from the University of Wroclaw (Poland) and master’s degree in Bioinformatics from the University Paris-Saclay and Aix-Marseille University (France).
+
+Prior to starting in Leeds, he worked as a bioinformatics data analyst at François Jacob Institute of Biology, CEA in Évry (Paris Area, France).
+
+His PhD research project aims at using genotypic and transcriptomic data to elucidate the pathogenesis of GCA in order to identify new pathways for therapeutic targeting.
+
+---
+
+Check the video below to see a 15 second explanation of Michał's project by himself:
+
+{{< video https://youtu.be/B3cWO8Zb8CE >}}

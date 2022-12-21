@@ -20,3 +20,16 @@ title: "ESR7: Elkyn Fabián Estupiñán"
 ---
 
 **Project Title**: *Identification of functionally relevant genetic variants associated with GCA*
+
+Elkyn Fabián Estupiñán Moreno is an Early Stage Researcher based in Institute of Parasitology and Biomedicine “López-Neyra” (IPBLN) – Spanish National Research Council (CSIC) in Granada, Spain.
+
+He is a Microbiologist and Bioanalyst with a master’s degree in Microbiology and Immunology from the Industrial University of Santander (UIS), Colombia.
+
+He is currently doing his PhD in Biomedicine and his principal research interest is to decipher the genetic bases of diseases mediated by the immune system. The objectives of his project at HELICAL are to elucidate the functional impact of genetic variants associated with giant-cell arteritis (GCA) through a systemic approach and to investigate more specific biomarkers and treatments for this disease.
+
+
+---
+
+Check the video below to see a 15 second explanation of Elkyn's project by himself:
+
+{{< video  https://youtu.be/MIHcDc5Imeg >}}

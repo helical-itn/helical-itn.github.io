@@ -20,3 +20,16 @@ title: "ESR10: Farah Kamberović"
 ---
 
 **Project Title**: *Functional characterisation of inflammation and vascular remodelling pathways in GCA*
+
+
+Farah Kamberović is an Early Stage Researcher at IDIBAPS/Hospital Clinic Barcelona (Spain). She holds a Bachelor’s degree in Microbiology from University of Ljubljana, Slovenia, Master’s degree in Immunology from University of Barcelona and a European Master’s Degree in Quality Control in Analytical Laboratories (EMQAL).
+
+Currently she is enrolled in a PhD program in Medicine at the University of Barcelona and her research will focus on patients suffering from giant cell arteritis (GCA).
+
+Main objectives of the project would be to identify predictors of response to tocilizumab, that is biologic therapy and first prescription medicine approved for treatment of GCA. She will also try to identify new biomarkers of the disease.
+
+---
+
+Check the video below to see a 15 second explanation of Farah's project by herself:
+
+{{< video https://youtu.be/6YqNkegZINg >}}

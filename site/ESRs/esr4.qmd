@@ -21,3 +21,18 @@ title: "ESR4: Enock Havyarimana"
 ---
 
 **Project Title**: *Harnessing the power of integrated data to investigate environmental exposures on ANCA vasculitis risk – an unbiased approach*
+
+
+Enock is an Early Stage Researcher at the University of Glasgow in Scotland.
+
+Prior to joining HELICAL, Enock worked as a scientific officer at the University of Cape Town, and as a junior research fellow at the chronic disease initiative for Africa (CDIA) in South Africa.
+
+He holds a bachelor’s degree in Medical Science Research and a master’s degree in Public Health (Epidemiology) from Stellenbosch University and the University of Cape Town, respectively.
+
+His current research is looking to understand the relationship between environmental exposures and the risk of developing ANCA vasculitis. 
+
+---
+
+Check the video below to see a 15 second explanation of Enock's project by himself:
+
+{{< video https://youtu.be/a7KlLfZExXY >}}

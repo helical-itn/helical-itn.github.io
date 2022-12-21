@@ -19,4 +19,18 @@ title: "ESR5: Solange González Chiappe"
 
 ---
 
+
 **Project Title**: *Focused study of the environmental impact on development of ANCA vasculitis- a hypothesis driven approach*
+
+
+Solange Gonzalez Chiappe is an Early Stage Researcher at Saint Gallen Hospital (Switzerland).
+
+She added to her a medical background, as an MD specialized in internal medicine, a Master’s Degree in Public Health (“Epidemiology and sanitary risks”, Lyon’s University, France). She is particularly interested in statistics and epidemiology.
+
+She is currently trying to find environmental risk factors associated with ANCA-associated vasculitis onset. To achieve this goal, she is planning to perform a case-control study that will be part of her PhD programme.
+
+---
+
+Check the video below to see a 15 second explanation of Solange's project by herself:
+
+{{< video https://youtu.be/KLNAeuR24Po >}}
