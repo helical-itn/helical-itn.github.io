@@ -8,13 +8,13 @@ title: "ESR1: Albert Navarro Gallinad"
 
 ![](../assets/esr_pictures/albert_square.png){.img-profile}
 
-{{< fa brands github >}} \ [navarral](https://github.com/navarral)<br>
-{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/alfontal/)<br>
+{{< fa brands github >}} \ [navarral](https://navarral.github.io/)<br>
+{{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/albert-navarro-gallinad/)<br>
 {{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-2336-753X)<br>
 {{< fa envelope >}} \ [albert.navarro@adaptcentre.ie](mailto:albert.navarro@adaptcentre.ie)
 
 {{< fa building-columns >}} **Host Institution** <br> ADAPT Centre, TCD <br>
-**Supervisor** <br> Declan O'Sullivan <br>
+**Supervisor** <br> Declan O'Sullivan and Fabrizio Orlandi<br>
 
 :::
 
@@ -22,12 +22,11 @@ title: "ESR1: Albert Navarro Gallinad"
 
 **Project Title**: *Scalable semantic data architecture for study of chronic disease*
 
+Albert Navarro Gallinad is our Early Stage Researcher (ESR) at [ADAPT centre](https://www.adaptcentre.ie/) in [Trinity College Dublin](https://www.tcd.ie/). 
 
-Albert Navarro Gallinad is our Early Stage Researcher (ESR) based at the ADAPT centre in Trinity College Dublin.
+His principal research interests lie in the data aspects (suitability, access and retrieval) to support research in the environmental effects on human health, and making Knowledge Graph technologies (Artificial Intelligence) usable for domain experts.
 
-His principal research interests lie in the data aspects (suitability, access and retrieval) to support research in the environmental effects on human health.
-
-He will design a series of steps to help clinician researchers explore environmental data to understand and support rare chronic disease research, which will be evaluated through the ANCA vasculitis in Ireland case study.
+Albert has developed a framework to enable health data researchers to link health and environmental data using Knowledge Graph (KG) technologies, which will be used to improve the understanding of the environmental triggers in ANCA vasculitis. Besides the direct impact on environmental health studies, this interdisciplinary framework can also serve as guidance for researchers trying to make technologies easier to use for domain experts.
 
 ---
 
