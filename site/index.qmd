@@ -4,7 +4,7 @@ subtitle: A Marie Skłodowska-Curie Innovative Training Network
 
 ---
 
-![](/assets/site_images/intro_image.jpg)
+{{< video  https://youtu.be/Cv96im10QLM >}}
 
 ## What is HELICAL?
 
