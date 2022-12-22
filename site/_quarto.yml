@@ -16,7 +16,7 @@ website:
   site-url: https://helical-itn.eu
   open-graph:
     site-name: "HELICAL ITN"
-    image: site_images/helical_thumbnail.jpg
+    image: https://raw.githubusercontent.com/helical-itn/helical-itn.github.io/main/site/assets/site_images/helical_thumbnail.jpg
     title: "HELICAL - MSCA Innovative Training Network"
     description: "Official Website of the MSCA Innovative Training Network HELICAL: HEalth data LInkage for ClinicAL benefit"
   favicon: assets/favicon.png
