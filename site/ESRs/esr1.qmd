@@ -9,7 +9,7 @@ title: "ESR1: Albert Navarro Gallinad"
 ![](../assets/esr_pictures/albert_square.png){.img-profile}
 
 {{< fa brands github >}} \ [navarral](https://github.com/navarral)<br>
-{{< fa brands globe >}} \ [navarral.github.io](https://navarral.github.io/)<br>
+{{< fa globe >}} \ [navarral.github.io](https://navarral.github.io/)<br>
 {{< fa brands linkedin >}}\  [LinkedIn](https://www.linkedin.com/in/albert-navarro-gallinad/)<br>
 {{< fa brands orcid >}} \ [ORCID](https://orcid.org/0000-0002-2336-753X)<br>
 {{< fa envelope >}} \ [albert.navarro@adaptcentre.ie](mailto:albert.navarro@adaptcentre.ie)
