@@ -5,3 +5,4 @@
 /.luarc.json
 **/.quarto/
 **/.Rhistory
+**/.ipynb_checkpoints/*
