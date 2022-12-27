@@ -113,3 +113,8 @@ table.hide-caption  caption {
 .smaller-text {
   font-size: 0.9rem;
 }
+
+.dataframe {
+  width: auto;
+  text-align: center;
+}

@@ -256,355 +256,351 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>I will use this blog post as a way to showcase the basic usage of registry data and linkage to environmental data typically done as part of my work as a member of HELICAL’S Work Package 1, whose main objective is to help understand the relationship between environmental exposures and vasculitis onset.</p>
-<p>I will try to display a simplified example of my usage of healthcare registries data. I make use of individual data just as a basis to aggregate and obtain incidence counts per <em>spatial unit</em> (zip-code, province, electoral district) and <em>time-unit</em> (daily, weekly, monthly) based on each patients residence and date of onset/diagnosis information.</p>
-<p>To illustrate the linkage process I will generate an environmental and healthcare record toy dataset and perform the linkage as I usually would:</p>
+<p>I will try to display a simplified example of my usage of healthcare registries data. I make use of individual data just as a basis to aggregate and obtain incidence counts per <em>spatial unit</em> (zip-code, province, electoral district) and <em>time-unit</em> (daily, weekly, monthly) based on each patients’ residence and date of onset/diagnosis information.</p>
+<p>To illustrate the linkage process I will generate an environmental and healthcare record toy dataset and perform the linkage as I usually would.</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:29.236097Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:28.943959Z&quot;}" data-execution_count="1">
 <details>
-<summary>
-Show Python Imports
-</summary>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:29.236097Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:28.943959Z&quot;}" data-execution_count="2">
+<summary>Show Python Imports</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
+</div>
+
 </section>
 <section id="environmental-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="environmental-dataset">Environmental dataset</h2>
-<p>In general, I fetch different datasets of publicly available or self-generated daily observations of several environmental variables: + Weather + Pollution + Biological air diversity + Chemical composition (via LIDAR or inplace sampling).</p>
-<p>A toy example would be the following table, spanning only 5 days for two different regions, A and B:</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:30.855613Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:30.818967Z&quot;}" data-execution_count="17">
+<p>In general, I fetch different datasets of publicly available or self-generated daily observations of several environmental variables:</p>
+<ul>
+<li>Weather</li>
+<li>Pollution</li>
+<li>Biological air diversity</li>
+<li>Chemical composition (via LIDAR or inplace sampling).</li>
+</ul>
+<p>A toy example would be the following table, spanning only 5 days for two different regions, <strong>A</strong> and <strong>B</strong>:</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:30.855613Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:30.818967Z&quot;}" data-execution_count="6">
 <details>
 <summary>Show Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment_df <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    date<span class="op">=</span>np.repeat(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">2</span>),</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    region<span class="op">=</span>np.tile([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">5</span>),</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    temperature<span class="op">=</span>np.random.normal(<span class="dv">20</span>, <span class="dv">5</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    no2<span class="op">=</span>np.random.normal(<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    fungal_species_1<span class="op">=</span>np.random.normal(<span class="dv">1000</span>, <span class="dv">100</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>),</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    bacterial_species_2<span class="op">=</span>np.random.normal(<span class="dv">750</span>, <span class="dv">75</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>)))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>environment_df.set_index(<span class="st">'date'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Date'</span>: np.repeat(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">2</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Region'</span>: np.tile([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">5</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Temperature'</span>: np.random.normal(<span class="dv">20</span>, <span class="dv">5</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NO₂'</span>: np.random.normal(<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Fungal Sp. 1'</span>: np.random.normal(<span class="dv">1000</span>, <span class="dv">100</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bacterial Sp. 2'</span>: np.random.normal(<span class="dv">750</span>, <span class="dv">75</span>, <span class="dv">10</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># this is just for styling the table on the blog</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>(environment_df.style</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a> .hide(axis<span class="op">=</span><span class="st">'index'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> .<span class="bu">format</span>({<span class="st">'Temperature'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">'NO₂'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">'Date'</span>: <span class="st">'{:%Y-%m-</span><span class="sc">%d</span><span class="st">}'</span>})</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a> .set_table_attributes(<span class="st">"class='dataframe table-hover', style='text-align: center'"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="6">
 
-<div>
 
-<table class="dataframe table table-sm table-striped">
+<table id="T_4d33c" class="dataframe table-hover table table-sm table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th>region</th>
-      <th>temperature</th>
-      <th>no2</th>
-      <th>fungal_species_1</th>
-      <th>bacterial_species_2</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th id="T_4d33c_level0_col0" class="col_heading level0 col0">Date</th>
+      <th id="T_4d33c_level0_col1" class="col_heading level0 col1">Region</th>
+      <th id="T_4d33c_level0_col2" class="col_heading level0 col2">Temperature</th>
+      <th id="T_4d33c_level0_col3" class="col_heading level0 col3">NO₂</th>
+      <th id="T_4d33c_level0_col4" class="col_heading level0 col4">Fungal Sp. 1</th>
+      <th id="T_4d33c_level0_col5" class="col_heading level0 col5">Bacterial Sp. 2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2021-01-01</th>
-      <td>A</td>
-      <td>19.57</td>
-      <td>3.94</td>
-      <td>1010</td>
-      <td>787</td>
+      <td id="T_4d33c_row0_col0" class="data row0 col0">2021-01-01</td>
+      <td id="T_4d33c_row0_col1" class="data row0 col1">A</td>
+      <td id="T_4d33c_row0_col2" class="data row0 col2">21.21</td>
+      <td id="T_4d33c_row0_col3" class="data row0 col3">6.15</td>
+      <td id="T_4d33c_row0_col4" class="data row0 col4">959</td>
+      <td id="T_4d33c_row0_col5" class="data row0 col5">723</td>
     </tr>
     <tr>
-      <th>2021-01-01</th>
-      <td>B</td>
-      <td>24.32</td>
-      <td>4.15</td>
-      <td>946</td>
-      <td>746</td>
+      <td id="T_4d33c_row1_col0" class="data row1 col0">2021-01-01</td>
+      <td id="T_4d33c_row1_col1" class="data row1 col1">B</td>
+      <td id="T_4d33c_row1_col2" class="data row1 col2">25.24</td>
+      <td id="T_4d33c_row1_col3" class="data row1 col3">5.42</td>
+      <td id="T_4d33c_row1_col4" class="data row1 col4">981</td>
+      <td id="T_4d33c_row1_col5" class="data row1 col5">705</td>
     </tr>
     <tr>
-      <th>2021-01-02</th>
-      <td>A</td>
-      <td>11.28</td>
-      <td>6.17</td>
-      <td>1012</td>
-      <td>787</td>
+      <td id="T_4d33c_row2_col0" class="data row2 col0">2021-01-02</td>
+      <td id="T_4d33c_row2_col1" class="data row2 col1">A</td>
+      <td id="T_4d33c_row2_col2" class="data row2 col2">19.03</td>
+      <td id="T_4d33c_row2_col3" class="data row2 col3">5.26</td>
+      <td id="T_4d33c_row2_col4" class="data row2 col4">1046</td>
+      <td id="T_4d33c_row2_col5" class="data row2 col5">790</td>
     </tr>
     <tr>
-      <th>2021-01-02</th>
-      <td>B</td>
-      <td>15.43</td>
-      <td>5.19</td>
-      <td>1003</td>
-      <td>852</td>
+      <td id="T_4d33c_row3_col0" class="data row3 col0">2021-01-02</td>
+      <td id="T_4d33c_row3_col1" class="data row3 col1">B</td>
+      <td id="T_4d33c_row3_col2" class="data row3 col2">24.04</td>
+      <td id="T_4d33c_row3_col3" class="data row3 col3">5.68</td>
+      <td id="T_4d33c_row3_col4" class="data row3 col4">1168</td>
+      <td id="T_4d33c_row3_col5" class="data row3 col5">752</td>
     </tr>
     <tr>
-      <th>2021-01-03</th>
-      <td>A</td>
-      <td>20.92</td>
-      <td>4.01</td>
-      <td>944</td>
-      <td>736</td>
+      <td id="T_4d33c_row4_col0" class="data row4 col0">2021-01-03</td>
+      <td id="T_4d33c_row4_col1" class="data row4 col1">A</td>
+      <td id="T_4d33c_row4_col2" class="data row4 col2">21.56</td>
+      <td id="T_4d33c_row4_col3" class="data row4 col3">5.70</td>
+      <td id="T_4d33c_row4_col4" class="data row4 col4">1061</td>
+      <td id="T_4d33c_row4_col5" class="data row4 col5">755</td>
     </tr>
     <tr>
-      <th>2021-01-03</th>
-      <td>B</td>
-      <td>30.20</td>
-      <td>5.76</td>
-      <td>999</td>
-      <td>734</td>
+      <td id="T_4d33c_row5_col0" class="data row5 col0">2021-01-03</td>
+      <td id="T_4d33c_row5_col1" class="data row5 col1">B</td>
+      <td id="T_4d33c_row5_col2" class="data row5 col2">13.82</td>
+      <td id="T_4d33c_row5_col3" class="data row5 col3">6.04</td>
+      <td id="T_4d33c_row5_col4" class="data row5 col4">964</td>
+      <td id="T_4d33c_row5_col5" class="data row5 col5">759</td>
     </tr>
     <tr>
-      <th>2021-01-04</th>
-      <td>A</td>
-      <td>18.71</td>
-      <td>4.37</td>
-      <td>971</td>
-      <td>737</td>
+      <td id="T_4d33c_row6_col0" class="data row6 col0">2021-01-04</td>
+      <td id="T_4d33c_row6_col1" class="data row6 col1">A</td>
+      <td id="T_4d33c_row6_col2" class="data row6 col2">22.23</td>
+      <td id="T_4d33c_row6_col3" class="data row6 col3">3.55</td>
+      <td id="T_4d33c_row6_col4" class="data row6 col4">924</td>
+      <td id="T_4d33c_row6_col5" class="data row6 col5">649</td>
     </tr>
     <tr>
-      <th>2021-01-04</th>
-      <td>B</td>
-      <td>21.85</td>
-      <td>3.68</td>
-      <td>858</td>
-      <td>724</td>
+      <td id="T_4d33c_row7_col0" class="data row7 col0">2021-01-04</td>
+      <td id="T_4d33c_row7_col1" class="data row7 col1">B</td>
+      <td id="T_4d33c_row7_col2" class="data row7 col2">26.51</td>
+      <td id="T_4d33c_row7_col3" class="data row7 col3">4.06</td>
+      <td id="T_4d33c_row7_col4" class="data row7 col4">996</td>
+      <td id="T_4d33c_row7_col5" class="data row7 col5">804</td>
     </tr>
     <tr>
-      <th>2021-01-05</th>
-      <td>A</td>
-      <td>17.30</td>
-      <td>4.76</td>
-      <td>1028</td>
-      <td>821</td>
+      <td id="T_4d33c_row8_col0" class="data row8 col0">2021-01-05</td>
+      <td id="T_4d33c_row8_col1" class="data row8 col1">A</td>
+      <td id="T_4d33c_row8_col2" class="data row8 col2">12.87</td>
+      <td id="T_4d33c_row8_col3" class="data row8 col3">6.35</td>
+      <td id="T_4d33c_row8_col4" class="data row8 col4">862</td>
+      <td id="T_4d33c_row8_col5" class="data row8 col5">626</td>
     </tr>
     <tr>
-      <th>2021-01-05</th>
-      <td>B</td>
-      <td>15.03</td>
-      <td>5.57</td>
-      <td>1020</td>
-      <td>793</td>
+      <td id="T_4d33c_row9_col0" class="data row9 col0">2021-01-05</td>
+      <td id="T_4d33c_row9_col1" class="data row9 col1">B</td>
+      <td id="T_4d33c_row9_col2" class="data row9 col2">24.84</td>
+      <td id="T_4d33c_row9_col3" class="data row9 col3">4.01</td>
+      <td id="T_4d33c_row9_col4" class="data row9 col4">939</td>
+      <td id="T_4d33c_row9_col5" class="data row9 col5">650</td>
     </tr>
   </tbody>
 </table>
-</div>
 </div>
 </div>
 </section>
 <section id="healthcare-records-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="healthcare-records-dataset">Healthcare records dataset</h2>
 <p>The minimal example of a healthcare records dataset that I use would contain, at the individual level, the patient’s residence region, and the (vasculitis) onset date recorded.</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:33.870139Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:33.849211Z&quot;}" data-execution_count="4">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:33.870139Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:33.849211Z&quot;}" data-execution_count="3">
 <details>
 <summary>Show Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>healthcare_records <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    patient_id<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">16</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    region<span class="op">=</span>np.random.choice([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">15</span>),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    onset_date<span class="op">=</span>np.random.choice(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">15</span>))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>healthcare_records <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Patient ID'</span>: <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">16</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Region'</span>: np.random.choice([<span class="st">'A'</span>, <span class="st">'B'</span>], <span class="dv">15</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Onset Date'</span>: np.random.choice(pd.date_range(<span class="st">'2021-01-01'</span>, <span class="st">'2021-01-05'</span>), <span class="dv">15</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>healthcare_records.set_index(<span class="st">'patient_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># this is just for styling the table on the blog</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>(healthcare_records</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a> .style</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a> .hide(axis<span class="op">=</span><span class="st">'index'</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> .<span class="bu">format</span>({<span class="st">'Onset Date'</span>: <span class="st">'{:%Y-%m-</span><span class="sc">%d</span><span class="st">}'</span>})</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a> .set_table_attributes(<span class="st">"class='dataframe table-hover'"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="3">
 
-<div>
 
-<table class="dataframe table table-sm table-striped">
+<table id="T_33db3" class="dataframe table-hover table table-sm table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th>region</th>
-      <th>onset_date</th>
-    </tr>
-    <tr>
-      <th>patient_id</th>
-      <th></th>
-      <th></th>
+      <th id="T_33db3_level0_col0" class="col_heading level0 col0">Patient ID</th>
+      <th id="T_33db3_level0_col1" class="col_heading level0 col1">Region</th>
+      <th id="T_33db3_level0_col2" class="col_heading level0 col2">Onset Date</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>A</td>
-      <td>2021-01-04</td>
+      <td id="T_33db3_row0_col0" class="data row0 col0">1</td>
+      <td id="T_33db3_row0_col1" class="data row0 col1">B</td>
+      <td id="T_33db3_row0_col2" class="data row0 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>A</td>
-      <td>2021-01-04</td>
+      <td id="T_33db3_row1_col0" class="data row1 col0">2</td>
+      <td id="T_33db3_row1_col1" class="data row1 col1">B</td>
+      <td id="T_33db3_row1_col2" class="data row1 col2">2021-01-05</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>B</td>
-      <td>2021-01-02</td>
+      <td id="T_33db3_row2_col0" class="data row2 col0">3</td>
+      <td id="T_33db3_row2_col1" class="data row2 col1">B</td>
+      <td id="T_33db3_row2_col2" class="data row2 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>B</td>
-      <td>2021-01-04</td>
+      <td id="T_33db3_row3_col0" class="data row3 col0">4</td>
+      <td id="T_33db3_row3_col1" class="data row3 col1">A</td>
+      <td id="T_33db3_row3_col2" class="data row3 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>A</td>
-      <td>2021-01-02</td>
+      <td id="T_33db3_row4_col0" class="data row4 col0">5</td>
+      <td id="T_33db3_row4_col1" class="data row4 col1">A</td>
+      <td id="T_33db3_row4_col2" class="data row4 col2">2021-01-02</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>B</td>
-      <td>2021-01-03</td>
+      <td id="T_33db3_row5_col0" class="data row5 col0">6</td>
+      <td id="T_33db3_row5_col1" class="data row5 col1">B</td>
+      <td id="T_33db3_row5_col2" class="data row5 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>A</td>
-      <td>2021-01-03</td>
+      <td id="T_33db3_row6_col0" class="data row6 col0">7</td>
+      <td id="T_33db3_row6_col1" class="data row6 col1">A</td>
+      <td id="T_33db3_row6_col2" class="data row6 col2">2021-01-02</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>B</td>
-      <td>2021-01-05</td>
+      <td id="T_33db3_row7_col0" class="data row7 col0">8</td>
+      <td id="T_33db3_row7_col1" class="data row7 col1">A</td>
+      <td id="T_33db3_row7_col2" class="data row7 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>B</td>
-      <td>2021-01-02</td>
+      <td id="T_33db3_row8_col0" class="data row8 col0">9</td>
+      <td id="T_33db3_row8_col1" class="data row8 col1">B</td>
+      <td id="T_33db3_row8_col2" class="data row8 col2">2021-01-03</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>B</td>
-      <td>2021-01-01</td>
+      <td id="T_33db3_row9_col0" class="data row9 col0">10</td>
+      <td id="T_33db3_row9_col1" class="data row9 col1">A</td>
+      <td id="T_33db3_row9_col2" class="data row9 col2">2021-01-02</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>A</td>
-      <td>2021-01-04</td>
+      <td id="T_33db3_row10_col0" class="data row10 col0">11</td>
+      <td id="T_33db3_row10_col1" class="data row10 col1">B</td>
+      <td id="T_33db3_row10_col2" class="data row10 col2">2021-01-02</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>B</td>
-      <td>2021-01-02</td>
+      <td id="T_33db3_row11_col0" class="data row11 col0">12</td>
+      <td id="T_33db3_row11_col1" class="data row11 col1">A</td>
+      <td id="T_33db3_row11_col2" class="data row11 col2">2021-01-01</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>A</td>
-      <td>2021-01-01</td>
+      <td id="T_33db3_row12_col0" class="data row12 col0">13</td>
+      <td id="T_33db3_row12_col1" class="data row12 col1">A</td>
+      <td id="T_33db3_row12_col2" class="data row12 col2">2021-01-02</td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>B</td>
-      <td>2021-01-02</td>
+      <td id="T_33db3_row13_col0" class="data row13 col0">14</td>
+      <td id="T_33db3_row13_col1" class="data row13 col1">B</td>
+      <td id="T_33db3_row13_col2" class="data row13 col2">2021-01-01</td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>B</td>
-      <td>2021-01-04</td>
+      <td id="T_33db3_row14_col0" class="data row14 col0">15</td>
+      <td id="T_33db3_row14_col1" class="data row14 col1">B</td>
+      <td id="T_33db3_row14_col2" class="data row14 col2">2021-01-01</td>
     </tr>
   </tbody>
 </table>
-</div>
 </div>
 </div>
 <p>I then go from individual level record to population level records aggregating by date and region, such that the data table I use looks like the following:</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:35.715531Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:35.687522Z&quot;}" data-execution_count="18">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:35.715531Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:35.687522Z&quot;}" data-execution_count="4">
 <details>
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>daily_cases <span class="op">=</span> (healthcare_records</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>             .groupby([<span class="st">'onset_date'</span>, <span class="st">'region'</span>])</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             .size()</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>             .rename(<span class="st">'cases'</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>             .astype(<span class="bu">int</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>             .reset_index()</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             .rename(columns<span class="op">=</span>{<span class="st">'onset_date'</span>: <span class="st">'date'</span>})</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>               .groupby([<span class="st">'Onset Date'</span>, <span class="st">'Region'</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>               .size()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>               .rename(<span class="st">'Cases'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>               .astype(<span class="bu">int</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>               .reset_index()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>               .rename(columns<span class="op">=</span>{<span class="st">'Onset Date'</span>: <span class="st">'Date'</span>})</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>daily_cases.set_index(<span class="st">'date'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># this is just for styling the table on the blog</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>(daily_cases</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a> .style</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a> .hide(axis<span class="op">=</span><span class="st">'index'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a> .<span class="bu">format</span>({<span class="st">'Date'</span>: <span class="st">'{:%Y-%m-</span><span class="sc">%d</span><span class="st">}'</span>})</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a> .set_table_attributes(<span class="st">"class='dataframe table-hover'"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="4">
 
-<div>
 
-<table class="dataframe table table-sm table-striped">
+<table id="T_a73e3" class="dataframe table-hover table table-sm table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th>region</th>
-      <th>cases</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
+      <th id="T_a73e3_level0_col0" class="col_heading level0 col0">Date</th>
+      <th id="T_a73e3_level0_col1" class="col_heading level0 col1">Region</th>
+      <th id="T_a73e3_level0_col2" class="col_heading level0 col2">Cases</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2021-01-01</th>
-      <td>A</td>
-      <td>1</td>
+      <td id="T_a73e3_row0_col0" class="data row0 col0">2021-01-01</td>
+      <td id="T_a73e3_row0_col1" class="data row0 col1">A</td>
+      <td id="T_a73e3_row0_col2" class="data row0 col2">1</td>
     </tr>
     <tr>
-      <th>2021-01-01</th>
-      <td>B</td>
-      <td>1</td>
+      <td id="T_a73e3_row1_col0" class="data row1 col0">2021-01-01</td>
+      <td id="T_a73e3_row1_col1" class="data row1 col1">B</td>
+      <td id="T_a73e3_row1_col2" class="data row1 col2">2</td>
     </tr>
     <tr>
-      <th>2021-01-02</th>
-      <td>A</td>
-      <td>1</td>
+      <td id="T_a73e3_row2_col0" class="data row2 col0">2021-01-02</td>
+      <td id="T_a73e3_row2_col1" class="data row2 col1">A</td>
+      <td id="T_a73e3_row2_col2" class="data row2 col2">4</td>
     </tr>
     <tr>
-      <th>2021-01-02</th>
-      <td>B</td>
-      <td>4</td>
+      <td id="T_a73e3_row3_col0" class="data row3 col0">2021-01-02</td>
+      <td id="T_a73e3_row3_col1" class="data row3 col1">B</td>
+      <td id="T_a73e3_row3_col2" class="data row3 col2">1</td>
     </tr>
     <tr>
-      <th>2021-01-03</th>
-      <td>A</td>
-      <td>1</td>
+      <td id="T_a73e3_row4_col0" class="data row4 col0">2021-01-03</td>
+      <td id="T_a73e3_row4_col1" class="data row4 col1">A</td>
+      <td id="T_a73e3_row4_col2" class="data row4 col2">2</td>
     </tr>
     <tr>
-      <th>2021-01-03</th>
-      <td>B</td>
-      <td>1</td>
+      <td id="T_a73e3_row5_col0" class="data row5 col0">2021-01-03</td>
+      <td id="T_a73e3_row5_col1" class="data row5 col1">B</td>
+      <td id="T_a73e3_row5_col2" class="data row5 col2">4</td>
     </tr>
     <tr>
-      <th>2021-01-04</th>
-      <td>A</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2021-01-04</th>
-      <td>B</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2021-01-05</th>
-      <td>B</td>
-      <td>1</td>
+      <td id="T_a73e3_row6_col0" class="data row6 col0">2021-01-05</td>
+      <td id="T_a73e3_row6_col1" class="data row6 col1">B</td>
+      <td id="T_a73e3_row6_col2" class="data row6 col2">1</td>
     </tr>
   </tbody>
 </table>
-</div>
 </div>
 </div>
 </section>
 <section id="linkage" class="level2">
 <h2 class="anchored" data-anchor-id="linkage">Linkage</h2>
-<p>The final linkage, which leads us to the table on which most of the analyses will be made, is based on merging both the environmental and epidemiological daily incidence counts in a single table based on the <code>date</code> and <code>region</code> columns, such that:</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:38.021508Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:37.996168Z&quot;}" data-execution_count="25">
+<p>The final linkage, which leads us to the table on which most of the analyses will be made, is based on merging both the environmental and epidemiological daily incidence counts in a single table based on the <code>Date</code> and <code>Region</code> columns, such that:</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:38.021508Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:37.996168Z&quot;}" data-execution_count="5">
 <details>
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(environment_df</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> .merge(daily_cases, on<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'region'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> .merge(daily_cases, on<span class="op">=</span>[<span class="st">'Date'</span>, <span class="st">'Region'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> .fillna(<span class="dv">0</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> .assign(cases<span class="op">=</span><span class="kw">lambda</span> df: df.cases.astype(<span class="bu">int</span>))</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> .sort_values([<span class="st">'region'</span>, <span class="st">'date'</span>])</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> .set_index([<span class="st">'region'</span>, <span class="st">'date'</span>])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> .assign(Cases<span class="op">=</span><span class="kw">lambda</span> df: df.Cases.astype(<span class="bu">int</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> .sort_values([<span class="st">'Region'</span>, <span class="st">'Date'</span>])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> .set_index([<span class="st">'Region'</span>, <span class="st">'Date'</span>])</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="5">
 
 <div>
 
@@ -613,15 +609,15 @@ Show Python Imports
     <tr>
       <th></th>
       <th></th>
-      <th>temperature</th>
-      <th>no2</th>
-      <th>fungal_species_1</th>
-      <th>bacterial_species_2</th>
-      <th>cases</th>
+      <th>Temperature</th>
+      <th>NO₂</th>
+      <th>Fungal Sp. 1</th>
+      <th>Bacterial Sp. 2</th>
+      <th>Cases</th>
     </tr>
     <tr>
-      <th>region</th>
-      <th>date</th>
+      <th>Region</th>
+      <th>Date</th>
       <th></th>
       <th></th>
       <th></th>
@@ -633,83 +629,83 @@ Show Python Imports
     <tr>
       <th rowspan="5" valign="top">A</th>
       <th>2021-01-01</th>
-      <td>19.57</td>
-      <td>3.94</td>
-      <td>1010</td>
-      <td>787</td>
+      <td>15.31</td>
+      <td>5.12</td>
+      <td>981</td>
+      <td>758</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2021-01-02</th>
-      <td>11.28</td>
-      <td>6.17</td>
-      <td>1012</td>
-      <td>787</td>
-      <td>1</td>
+      <td>20.83</td>
+      <td>3.09</td>
+      <td>1086</td>
+      <td>782</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2021-01-03</th>
-      <td>20.92</td>
-      <td>4.01</td>
-      <td>944</td>
-      <td>736</td>
-      <td>1</td>
+      <td>22.09</td>
+      <td>4.66</td>
+      <td>903</td>
+      <td>801</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2021-01-04</th>
-      <td>18.71</td>
-      <td>4.37</td>
-      <td>971</td>
-      <td>737</td>
-      <td>3</td>
+      <td>25.52</td>
+      <td>4.47</td>
+      <td>823</td>
+      <td>716</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2021-01-05</th>
-      <td>17.30</td>
-      <td>4.76</td>
-      <td>1028</td>
-      <td>821</td>
+      <td>27.61</td>
+      <td>4.41</td>
+      <td>1059</td>
+      <td>763</td>
       <td>0</td>
     </tr>
     <tr>
       <th rowspan="5" valign="top">B</th>
       <th>2021-01-01</th>
-      <td>24.32</td>
-      <td>4.15</td>
-      <td>946</td>
-      <td>746</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2021-01-02</th>
-      <td>15.43</td>
-      <td>5.19</td>
-      <td>1003</td>
-      <td>852</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2021-01-03</th>
-      <td>30.20</td>
-      <td>5.76</td>
-      <td>999</td>
-      <td>734</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2021-01-04</th>
-      <td>21.85</td>
-      <td>3.68</td>
-      <td>858</td>
-      <td>724</td>
+      <td>20.98</td>
+      <td>5.58</td>
+      <td>1008</td>
+      <td>692</td>
       <td>2</td>
     </tr>
     <tr>
+      <th>2021-01-02</th>
+      <td>18.13</td>
+      <td>4.02</td>
+      <td>1206</td>
+      <td>779</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2021-01-03</th>
+      <td>17.26</td>
+      <td>5.11</td>
+      <td>879</td>
+      <td>748</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2021-01-04</th>
+      <td>21.32</td>
+      <td>5.40</td>
+      <td>1124</td>
+      <td>882</td>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>2021-01-05</th>
-      <td>15.03</td>
-      <td>5.57</td>
-      <td>1020</td>
-      <td>793</td>
+      <td>18.66</td>
+      <td>5.42</td>
+      <td>897</td>
+      <td>660</td>
       <td>1</td>
     </tr>
   </tbody>
