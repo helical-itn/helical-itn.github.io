@@ -56,16 +56,25 @@ body {
   inherits: nav_footer-left;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .msca-logo {
-  width: 12%;
+  min-width: 70px;
+  max-width: 70px;
   float: left;
   padding: 5px;
 }  
 
 .msca-text {
-  width: 88%;
+  width: 100%;
+  max-width: 600px;
   float: right;
-  padding: 5px;
+  padding: 10px;
+  text-align: justify;
 }
 
 .left-about {
@@ -85,7 +94,6 @@ table.hide-caption  caption {
 }
 
 .img-profile {
-
     width: 100%;
     border-radius: 50%;
   }
@@ -118,3 +126,9 @@ table.hide-caption  caption {
   width: auto;
   text-align: center;
 }
+
+.contact-text p {
+  font-size: .9rem;
+  text-align: left;
+}
+
