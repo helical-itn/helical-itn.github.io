@@ -103,6 +103,10 @@ table.hide-caption  caption {
 
 }
 
+.profile-text p {
+  text-align: left;
+}
+
 .profile-text a:link {
   text-decoration: none;
   color:#2E579E
