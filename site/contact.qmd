@@ -17,10 +17,11 @@ You can find their contact details below:
 ![Project Coordinator: <br> Prof. Mark Little](/assets/supervisor_pictures/mark-little.jpg)
 
 
+
+![Project Manager: <br> Valerie de Moor](/assets/supervisor_pictures/valerie-de-moor.jpg)
+
+
 ![Project Manager: <br> Jessica Grene](/assets/supervisor_pictures/jessica-grene.jpg)
-
-
-![Project Manager: <br> Valerie de Moor](/assets/supervisor_pictures/valerie-de-moor.avif)
 
 <div class=contact-text style='text-align:left'>
 <p>Trinity Translational Medicine Institute</p>
@@ -28,17 +29,16 @@ You can find their contact details below:
 <p><i class="fa-solid fa-envelope" aria-label="envelope"></i> [mlittle@tcd.ie](mailto:mlittle@tcd.ie)</p>
 </div>
 
-
 <div class=contact-text>
 <p>ADAPT Centre</p>
 <p>Trinity College Dublin</p>
-<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> [jgrene@tcd.ie](mailto:jgrene@tcd.ie)</p>
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> [demoorv@tcd.ie](mailto:demoorv@tcd.ie)</p>
 </div>
 
 <div class=contact-text>
 <p>ADAPT Centre</p>
 <p>Trinity College Dublin</p>
-<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> [demoorv@tcd.ie](mailto:demoorv@tcd.ie)</p>
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> [jgrene@tcd.ie](mailto:jgrene@tcd.ie)</p>
 </div>
 
 :::
