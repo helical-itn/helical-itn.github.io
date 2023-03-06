@@ -32,6 +32,11 @@ body {
   font-family: Georgia, Cambria,"Times New Roman",Times,serif;
 }
 
+
+header, h1, h2, h3, h4, h5, h6 {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .lead {
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
   font-size: 1.275rem;
@@ -128,7 +133,7 @@ table.hide-caption  caption {
 
 .dataframe {
   width: auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .contact-text p {
@@ -136,3 +141,10 @@ table.hide-caption  caption {
   text-align: left;
 }
 
+td .td-left-th-center {
+  text-align: left;
+}
+
+th .td-left-th-center {
+  text-align: center;
+}

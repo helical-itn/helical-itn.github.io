@@ -42,6 +42,13 @@
     "text": "{.table-striped.table-hover.hide-caption.table-responsive}\n\n\n\n\n\n\n\n\n\n\n\n  Host\nProject\nSupervisor\n\n\n\n\nESR1\n\nTCD\nScalable semantic data architecture for study of chronic disease\nDeclan O’Sullivan\n\n\nESR2\n\nIBM\nCross-Domain Data Fusion techniques for vasculitis prediction\nMaría Rodríguez-Martínez\n\n\nESR3\n\nTCD\nEnsemble averaging for complex disease prediction in the large p small n domain from multiple data\nJason Wyse\n\n\nESR4\n\nUGLAS\nHarnessing the power of integrated data to investigate environmental exposures on ANCA vasculitis risk – an unbiased approach\nNeil Basu\n\n\nESR5\n\nKSSG\nFocused study of the environmental impact on development of ANCA vasculitis- a hypothesis driven approach\nAlfred Mahr\n\n\nESR6\n\nISGlobal\nAtmospheric monitoring and time series analysis of climate and pollution impact on vasculitis onset\nXavier Rodó\n\n\nESR7\n\nCSIC\nIdentification of functionally relevant genetic variants associated with GCA\nJavier Martin\n\n\nESR8\n\nULEEDS\nLinking public and GCA datasets to identify novel pathogenic pathways\nAnn Morgan\n\n\nESR9\n\nAX\nSystems biology and bioinformatics approaches to provide a holistic understanding of GCA biology\nJosé Manuel Mas\n\n\nESR10\n\nIDIBAPS\nFunctional characterisation of inflammation and vascular remodelling pathways in GCA\nMaria Cid\n\n\nESR11\n\nMUW\nExtracellular Vesicles (EV) as markers of active disease in AAV\nRenate Kain\n\n\nESR12\n\nTG\nComputer assisted morphometry of pathological changes in renal biopsies from patients with AAV\nRupert Ecker\n\n\nESR13\n\nKTH\nProfiling the autoantibody repertoire in the context of systemic vasculitis flare\nPeter Nilsson\n\n\nESR14\n\nFI\nA novel multi-parametric diagnostic tool for diagnosis of vasculitis\nHueseyin Firat\n\n\nESR15\n\nI-HD\nData management for promoting research while protecting privacy\nPascal Coorevits"
   },
   {
+    "objectID": "reports.html",
+    "href": "reports.html",
+    "title": "Reports and Deliverables",
+    "section": "",
+    "text": "The project has produced a number of reports and deliverables. These are listed below and can be downloaded from the links provided:\n\n4.1 Data Management Plan.\n4.3 Governance Framework for Research in Rare Diseases\n4.4 Proposed governance framework for research in rare diseases."
+  },
+  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact us",
