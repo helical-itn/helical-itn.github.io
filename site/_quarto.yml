@@ -4,6 +4,7 @@ project:
     - index.qmd
     - about.qmd
     - projects.qmd
+    - reports.qmd
     - contact.qmd
     - blog/index.qmd
     - blog/posts/*
@@ -49,6 +50,8 @@ website:
         href: projects.qmd
       - text: Blog
         href: blog/index.qmd
+      - text: Reports
+        href: reports.qmd
       - text: Contact
         href: contact.qmd
 
