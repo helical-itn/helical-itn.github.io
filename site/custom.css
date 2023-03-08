@@ -148,3 +148,7 @@ td .td-left-th-center {
 th .td-left-th-center {
   text-align: center;
 }
+
+.menu-text {
+  font-size: 1rem;
+}
