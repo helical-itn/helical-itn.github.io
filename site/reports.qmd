@@ -6,8 +6,14 @@ title: "Reports and Deliverables"
 
 The project has produced a number of reports and deliverables. These are listed below and can be downloaded from the links provided:
 
-+ [4.1 Data Management Plan.](assets/deliverables/D4.1%20HELICAL%20DMP.pdf)
++ [D1.2 Statistical Software Package and code](assets/deliverables/1.2%20Statistical%20Software%20Package%20and%20Code.pdf)
 
-+ [4.3 Governance Framework for Research in Rare Diseases ](assets/deliverables/D4.3%20Governance%20framework%20in%20rare%20diseases.pdf)
++ [D4.1 Data Management Plan.](assets/deliverables/D4.1%20HELICAL%20DMP.pdf)
 
-+ [4.4 Proposed governance framework for research in rare diseases.](assets/deliverables/HELICAL%20D%204.4%20-%20Proposed%20Governance%20Framework.pdf)
++ [D4.2 Information Governance Policies](assets/deliverables/4.2%20Information%20Governance%20Policies.pdf)
+
++ [D4.3 Governance Framework for Research in Rare Diseases ](assets/deliverables/D4.3%20Governance%20framework%20in%20rare%20diseases.pdf)
+
++ [D4.4 Proposed governance framework for research in rare diseases.](assets/deliverables/HELICAL%20D%204.4%20-%20Proposed%20Governance%20Framework.pdf)
+
++ [D6.7 Open Data Research Pilot](assets/deliverables/6.7%20Open%20Data%20Research%20Pilot.pdf)
