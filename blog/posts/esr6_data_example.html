@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,9 +18,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -152,59 +123,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">HELICAL</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../reports.html">
+    <a class="nav-link" href="../../reports.html" rel="" target="">
  <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
  <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/helical-itn"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/helical-itn" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/helicalitn"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/helicalitn" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/helicalnetwork/"><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/helicalnetwork/" rel="" target=""><i class="bi bi-instagram" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/helical-itn/"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/company/helical-itn/" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -250,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p><b>ESR6</b>: Alejandro Fontal <a href="https://orcid.org/0000-0003-1689-0557" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p><b>ESR6</b>: Alejandro Fontal <a href="https://orcid.org/0000-0003-1138-2158" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
   </div>
     
@@ -266,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>I will use this blog post as a way to showcase the basic usage of registry data and linkage to environmental data typically done as part of my work as a member of HELICAL’S Work Package 1, whose main objective is to help understand the relationship between environmental exposures and vasculitis onset.</p>
 <p>I will try to display a simplified example of my usage of healthcare registries data. I make use of individual data just as a basis to aggregate and obtain incidence counts per <em>spatial unit</em> (zip-code, province, electoral district) and <em>time-unit</em> (daily, weekly, monthly) based on each patients’ residence and date of onset/diagnosis information.</p>
 <p>To illustrate the linkage process I will generate an environmental and healthcare record toy dataset and perform the linkage as I usually would.</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:29.236097Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:28.943959Z&quot;}" data-execution_count="1">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:29.236097Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:28.943959Z&quot;}" data-execution_count="2">
 <details>
 <summary>Show Python Imports</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -285,7 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Chemical composition (via LIDAR or inplace sampling).</li>
 </ul>
 <p>A toy example would be the following table, spanning only 5 days for two different regions, <strong>A</strong> and <strong>B</strong>:</p>
-<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:30.855613Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:30.818967Z&quot;}" data-execution_count="6">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2021-01-21T10:32:30.855613Z&quot;,&quot;start_time&quot;:&quot;2021-01-21T10:32:30.818967Z&quot;}" data-execution_count="7">
 <details>
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment_df <span class="op">=</span> pd.DataFrame({</span>
@@ -301,109 +274,120 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># this is just for styling the table on the blog</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>(environment_df.style</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a> .hide(axis<span class="op">=</span><span class="st">'index'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  .hide(axis='index')</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> .<span class="bu">format</span>({<span class="st">'Temperature'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">'NO₂'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">'Date'</span>: <span class="st">'{:%Y-%m-</span><span class="sc">%d</span><span class="st">}'</span>})</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a> .set_table_attributes(<span class="st">"class='dataframe table-hover', style='text-align: center'"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a> .set_table_attributes(<span class="st">"class='dataframe table-hover td-left-th-center'"</span>)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="7">
 
 
-<table id="T_4d33c" class="dataframe table-hover table table-sm table-striped">
-  <thead>
-    <tr>
-      <th id="T_4d33c_level0_col0" class="col_heading level0 col0">Date</th>
-      <th id="T_4d33c_level0_col1" class="col_heading level0 col1">Region</th>
-      <th id="T_4d33c_level0_col2" class="col_heading level0 col2">Temperature</th>
-      <th id="T_4d33c_level0_col3" class="col_heading level0 col3">NO₂</th>
-      <th id="T_4d33c_level0_col4" class="col_heading level0 col4">Fungal Sp. 1</th>
-      <th id="T_4d33c_level0_col5" class="col_heading level0 col5">Bacterial Sp. 2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="T_4d33c_row0_col0" class="data row0 col0">2021-01-01</td>
-      <td id="T_4d33c_row0_col1" class="data row0 col1">A</td>
-      <td id="T_4d33c_row0_col2" class="data row0 col2">21.21</td>
-      <td id="T_4d33c_row0_col3" class="data row0 col3">6.15</td>
-      <td id="T_4d33c_row0_col4" class="data row0 col4">959</td>
-      <td id="T_4d33c_row0_col5" class="data row0 col5">723</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row1_col0" class="data row1 col0">2021-01-01</td>
-      <td id="T_4d33c_row1_col1" class="data row1 col1">B</td>
-      <td id="T_4d33c_row1_col2" class="data row1 col2">25.24</td>
-      <td id="T_4d33c_row1_col3" class="data row1 col3">5.42</td>
-      <td id="T_4d33c_row1_col4" class="data row1 col4">981</td>
-      <td id="T_4d33c_row1_col5" class="data row1 col5">705</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row2_col0" class="data row2 col0">2021-01-02</td>
-      <td id="T_4d33c_row2_col1" class="data row2 col1">A</td>
-      <td id="T_4d33c_row2_col2" class="data row2 col2">19.03</td>
-      <td id="T_4d33c_row2_col3" class="data row2 col3">5.26</td>
-      <td id="T_4d33c_row2_col4" class="data row2 col4">1046</td>
-      <td id="T_4d33c_row2_col5" class="data row2 col5">790</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row3_col0" class="data row3 col0">2021-01-02</td>
-      <td id="T_4d33c_row3_col1" class="data row3 col1">B</td>
-      <td id="T_4d33c_row3_col2" class="data row3 col2">24.04</td>
-      <td id="T_4d33c_row3_col3" class="data row3 col3">5.68</td>
-      <td id="T_4d33c_row3_col4" class="data row3 col4">1168</td>
-      <td id="T_4d33c_row3_col5" class="data row3 col5">752</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row4_col0" class="data row4 col0">2021-01-03</td>
-      <td id="T_4d33c_row4_col1" class="data row4 col1">A</td>
-      <td id="T_4d33c_row4_col2" class="data row4 col2">21.56</td>
-      <td id="T_4d33c_row4_col3" class="data row4 col3">5.70</td>
-      <td id="T_4d33c_row4_col4" class="data row4 col4">1061</td>
-      <td id="T_4d33c_row4_col5" class="data row4 col5">755</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row5_col0" class="data row5 col0">2021-01-03</td>
-      <td id="T_4d33c_row5_col1" class="data row5 col1">B</td>
-      <td id="T_4d33c_row5_col2" class="data row5 col2">13.82</td>
-      <td id="T_4d33c_row5_col3" class="data row5 col3">6.04</td>
-      <td id="T_4d33c_row5_col4" class="data row5 col4">964</td>
-      <td id="T_4d33c_row5_col5" class="data row5 col5">759</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row6_col0" class="data row6 col0">2021-01-04</td>
-      <td id="T_4d33c_row6_col1" class="data row6 col1">A</td>
-      <td id="T_4d33c_row6_col2" class="data row6 col2">22.23</td>
-      <td id="T_4d33c_row6_col3" class="data row6 col3">3.55</td>
-      <td id="T_4d33c_row6_col4" class="data row6 col4">924</td>
-      <td id="T_4d33c_row6_col5" class="data row6 col5">649</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row7_col0" class="data row7 col0">2021-01-04</td>
-      <td id="T_4d33c_row7_col1" class="data row7 col1">B</td>
-      <td id="T_4d33c_row7_col2" class="data row7 col2">26.51</td>
-      <td id="T_4d33c_row7_col3" class="data row7 col3">4.06</td>
-      <td id="T_4d33c_row7_col4" class="data row7 col4">996</td>
-      <td id="T_4d33c_row7_col5" class="data row7 col5">804</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row8_col0" class="data row8 col0">2021-01-05</td>
-      <td id="T_4d33c_row8_col1" class="data row8 col1">A</td>
-      <td id="T_4d33c_row8_col2" class="data row8 col2">12.87</td>
-      <td id="T_4d33c_row8_col3" class="data row8 col3">6.35</td>
-      <td id="T_4d33c_row8_col4" class="data row8 col4">862</td>
-      <td id="T_4d33c_row8_col5" class="data row8 col5">626</td>
-    </tr>
-    <tr>
-      <td id="T_4d33c_row9_col0" class="data row9 col0">2021-01-05</td>
-      <td id="T_4d33c_row9_col1" class="data row9 col1">B</td>
-      <td id="T_4d33c_row9_col2" class="data row9 col2">24.84</td>
-      <td id="T_4d33c_row9_col3" class="data row9 col3">4.01</td>
-      <td id="T_4d33c_row9_col4" class="data row9 col4">939</td>
-      <td id="T_4d33c_row9_col5" class="data row9 col5">650</td>
-    </tr>
-  </tbody>
+<table id="T_a3615" class="dataframe table-hover td-left-th-center table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_a3615_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Date</th>
+<th id="T_a3615_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Region</th>
+<th id="T_a3615_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Temperature</th>
+<th id="T_a3615_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">NO₂</th>
+<th id="T_a3615_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Fungal Sp. 1</th>
+<th id="T_a3615_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Bacterial Sp. 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_a3615_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_a3615_row0_col0" class="data row0 col0">2021-01-01</td>
+<td id="T_a3615_row0_col1" class="data row0 col1">A</td>
+<td id="T_a3615_row0_col2" class="data row0 col2">17.58</td>
+<td id="T_a3615_row0_col3" class="data row0 col3">3.85</td>
+<td id="T_a3615_row0_col4" class="data row0 col4">927</td>
+<td id="T_a3615_row0_col5" class="data row0 col5">783</td>
+</tr>
+<tr class="even">
+<td id="T_a3615_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_a3615_row1_col0" class="data row1 col0">2021-01-01</td>
+<td id="T_a3615_row1_col1" class="data row1 col1">B</td>
+<td id="T_a3615_row1_col2" class="data row1 col2">32.16</td>
+<td id="T_a3615_row1_col3" class="data row1 col3">5.01</td>
+<td id="T_a3615_row1_col4" class="data row1 col4">951</td>
+<td id="T_a3615_row1_col5" class="data row1 col5">630</td>
+</tr>
+<tr class="odd">
+<td id="T_a3615_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_a3615_row2_col0" class="data row2 col0">2021-01-02</td>
+<td id="T_a3615_row2_col1" class="data row2 col1">A</td>
+<td id="T_a3615_row2_col2" class="data row2 col2">24.76</td>
+<td id="T_a3615_row2_col3" class="data row2 col3">5.15</td>
+<td id="T_a3615_row2_col4" class="data row2 col4">982</td>
+<td id="T_a3615_row2_col5" class="data row2 col5">797</td>
+</tr>
+<tr class="even">
+<td id="T_a3615_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_a3615_row3_col0" class="data row3 col0">2021-01-02</td>
+<td id="T_a3615_row3_col1" class="data row3 col1">B</td>
+<td id="T_a3615_row3_col2" class="data row3 col2">24.16</td>
+<td id="T_a3615_row3_col3" class="data row3 col3">3.47</td>
+<td id="T_a3615_row3_col4" class="data row3 col4">835</td>
+<td id="T_a3615_row3_col5" class="data row3 col5">854</td>
+</tr>
+<tr class="odd">
+<td id="T_a3615_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_a3615_row4_col0" class="data row4 col0">2021-01-03</td>
+<td id="T_a3615_row4_col1" class="data row4 col1">A</td>
+<td id="T_a3615_row4_col2" class="data row4 col2">17.96</td>
+<td id="T_a3615_row4_col3" class="data row4 col3">5.84</td>
+<td id="T_a3615_row4_col4" class="data row4 col4">1005</td>
+<td id="T_a3615_row4_col5" class="data row4 col5">781</td>
+</tr>
+<tr class="even">
+<td id="T_a3615_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_a3615_row5_col0" class="data row5 col0">2021-01-03</td>
+<td id="T_a3615_row5_col1" class="data row5 col1">B</td>
+<td id="T_a3615_row5_col2" class="data row5 col2">18.68</td>
+<td id="T_a3615_row5_col3" class="data row5 col3">4.40</td>
+<td id="T_a3615_row5_col4" class="data row5 col4">811</td>
+<td id="T_a3615_row5_col5" class="data row5 col5">723</td>
+</tr>
+<tr class="odd">
+<td id="T_a3615_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_a3615_row6_col0" class="data row6 col0">2021-01-04</td>
+<td id="T_a3615_row6_col1" class="data row6 col1">A</td>
+<td id="T_a3615_row6_col2" class="data row6 col2">22.51</td>
+<td id="T_a3615_row6_col3" class="data row6 col3">6.73</td>
+<td id="T_a3615_row6_col4" class="data row6 col4">1126</td>
+<td id="T_a3615_row6_col5" class="data row6 col5">632</td>
+</tr>
+<tr class="even">
+<td id="T_a3615_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_a3615_row7_col0" class="data row7 col0">2021-01-04</td>
+<td id="T_a3615_row7_col1" class="data row7 col1">B</td>
+<td id="T_a3615_row7_col2" class="data row7 col2">14.68</td>
+<td id="T_a3615_row7_col3" class="data row7 col3">5.24</td>
+<td id="T_a3615_row7_col4" class="data row7 col4">981</td>
+<td id="T_a3615_row7_col5" class="data row7 col5">821</td>
+</tr>
+<tr class="odd">
+<td id="T_a3615_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_a3615_row8_col0" class="data row8 col0">2021-01-05</td>
+<td id="T_a3615_row8_col1" class="data row8 col1">A</td>
+<td id="T_a3615_row8_col2" class="data row8 col2">26.34</td>
+<td id="T_a3615_row8_col3" class="data row8 col3">5.69</td>
+<td id="T_a3615_row8_col4" class="data row8 col4">1028</td>
+<td id="T_a3615_row8_col5" class="data row8 col5">674</td>
+</tr>
+<tr class="even">
+<td id="T_a3615_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_a3615_row9_col0" class="data row9 col0">2021-01-05</td>
+<td id="T_a3615_row9_col1" class="data row9 col1">B</td>
+<td id="T_a3615_row9_col2" class="data row9 col2">17.50</td>
+<td id="T_a3615_row9_col3" class="data row9 col3">4.66</td>
+<td id="T_a3615_row9_col4" class="data row9 col4">999</td>
+<td id="T_a3615_row9_col5" class="data row9 col5">644</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -432,91 +416,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell-output cell-output-display" data-execution_count="3">
 
 
-<table id="T_33db3" class="dataframe table-hover table table-sm table-striped">
-  <thead>
-    <tr>
-      <th id="T_33db3_level0_col0" class="col_heading level0 col0">Patient ID</th>
-      <th id="T_33db3_level0_col1" class="col_heading level0 col1">Region</th>
-      <th id="T_33db3_level0_col2" class="col_heading level0 col2">Onset Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="T_33db3_row0_col0" class="data row0 col0">1</td>
-      <td id="T_33db3_row0_col1" class="data row0 col1">B</td>
-      <td id="T_33db3_row0_col2" class="data row0 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row1_col0" class="data row1 col0">2</td>
-      <td id="T_33db3_row1_col1" class="data row1 col1">B</td>
-      <td id="T_33db3_row1_col2" class="data row1 col2">2021-01-05</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row2_col0" class="data row2 col0">3</td>
-      <td id="T_33db3_row2_col1" class="data row2 col1">B</td>
-      <td id="T_33db3_row2_col2" class="data row2 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row3_col0" class="data row3 col0">4</td>
-      <td id="T_33db3_row3_col1" class="data row3 col1">A</td>
-      <td id="T_33db3_row3_col2" class="data row3 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row4_col0" class="data row4 col0">5</td>
-      <td id="T_33db3_row4_col1" class="data row4 col1">A</td>
-      <td id="T_33db3_row4_col2" class="data row4 col2">2021-01-02</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row5_col0" class="data row5 col0">6</td>
-      <td id="T_33db3_row5_col1" class="data row5 col1">B</td>
-      <td id="T_33db3_row5_col2" class="data row5 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row6_col0" class="data row6 col0">7</td>
-      <td id="T_33db3_row6_col1" class="data row6 col1">A</td>
-      <td id="T_33db3_row6_col2" class="data row6 col2">2021-01-02</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row7_col0" class="data row7 col0">8</td>
-      <td id="T_33db3_row7_col1" class="data row7 col1">A</td>
-      <td id="T_33db3_row7_col2" class="data row7 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row8_col0" class="data row8 col0">9</td>
-      <td id="T_33db3_row8_col1" class="data row8 col1">B</td>
-      <td id="T_33db3_row8_col2" class="data row8 col2">2021-01-03</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row9_col0" class="data row9 col0">10</td>
-      <td id="T_33db3_row9_col1" class="data row9 col1">A</td>
-      <td id="T_33db3_row9_col2" class="data row9 col2">2021-01-02</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row10_col0" class="data row10 col0">11</td>
-      <td id="T_33db3_row10_col1" class="data row10 col1">B</td>
-      <td id="T_33db3_row10_col2" class="data row10 col2">2021-01-02</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row11_col0" class="data row11 col0">12</td>
-      <td id="T_33db3_row11_col1" class="data row11 col1">A</td>
-      <td id="T_33db3_row11_col2" class="data row11 col2">2021-01-01</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row12_col0" class="data row12 col0">13</td>
-      <td id="T_33db3_row12_col1" class="data row12 col1">A</td>
-      <td id="T_33db3_row12_col2" class="data row12 col2">2021-01-02</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row13_col0" class="data row13 col0">14</td>
-      <td id="T_33db3_row13_col1" class="data row13 col1">B</td>
-      <td id="T_33db3_row13_col2" class="data row13 col2">2021-01-01</td>
-    </tr>
-    <tr>
-      <td id="T_33db3_row14_col0" class="data row14 col0">15</td>
-      <td id="T_33db3_row14_col1" class="data row14 col1">B</td>
-      <td id="T_33db3_row14_col2" class="data row14 col2">2021-01-01</td>
-    </tr>
-  </tbody>
+<table id="T_87c60" class="dataframe table-hover table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th id="T_87c60_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Patient ID</th>
+<th id="T_87c60_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Region</th>
+<th id="T_87c60_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Onset Date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_87c60_row0_col0" class="data row0 col0">1</td>
+<td id="T_87c60_row0_col1" class="data row0 col1">B</td>
+<td id="T_87c60_row0_col2" class="data row0 col2">2021-01-05</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row1_col0" class="data row1 col0">2</td>
+<td id="T_87c60_row1_col1" class="data row1 col1">B</td>
+<td id="T_87c60_row1_col2" class="data row1 col2">2021-01-05</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row2_col0" class="data row2 col0">3</td>
+<td id="T_87c60_row2_col1" class="data row2 col1">B</td>
+<td id="T_87c60_row2_col2" class="data row2 col2">2021-01-01</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row3_col0" class="data row3 col0">4</td>
+<td id="T_87c60_row3_col1" class="data row3 col1">B</td>
+<td id="T_87c60_row3_col2" class="data row3 col2">2021-01-02</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row4_col0" class="data row4 col0">5</td>
+<td id="T_87c60_row4_col1" class="data row4 col1">A</td>
+<td id="T_87c60_row4_col2" class="data row4 col2">2021-01-05</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row5_col0" class="data row5 col0">6</td>
+<td id="T_87c60_row5_col1" class="data row5 col1">A</td>
+<td id="T_87c60_row5_col2" class="data row5 col2">2021-01-05</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row6_col0" class="data row6 col0">7</td>
+<td id="T_87c60_row6_col1" class="data row6 col1">B</td>
+<td id="T_87c60_row6_col2" class="data row6 col2">2021-01-01</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row7_col0" class="data row7 col0">8</td>
+<td id="T_87c60_row7_col1" class="data row7 col1">B</td>
+<td id="T_87c60_row7_col2" class="data row7 col2">2021-01-05</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row8_col0" class="data row8 col0">9</td>
+<td id="T_87c60_row8_col1" class="data row8 col1">A</td>
+<td id="T_87c60_row8_col2" class="data row8 col2">2021-01-03</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row9_col0" class="data row9 col0">10</td>
+<td id="T_87c60_row9_col1" class="data row9 col1">B</td>
+<td id="T_87c60_row9_col2" class="data row9 col2">2021-01-04</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row10_col0" class="data row10 col0">11</td>
+<td id="T_87c60_row10_col1" class="data row10 col1">B</td>
+<td id="T_87c60_row10_col2" class="data row10 col2">2021-01-03</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row11_col0" class="data row11 col0">12</td>
+<td id="T_87c60_row11_col1" class="data row11 col1">A</td>
+<td id="T_87c60_row11_col2" class="data row11 col2">2021-01-02</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row12_col0" class="data row12 col0">13</td>
+<td id="T_87c60_row12_col1" class="data row12 col1">B</td>
+<td id="T_87c60_row12_col2" class="data row12 col2">2021-01-02</td>
+</tr>
+<tr class="even">
+<td id="T_87c60_row13_col0" class="data row13 col0">14</td>
+<td id="T_87c60_row13_col1" class="data row13 col1">B</td>
+<td id="T_87c60_row13_col2" class="data row13 col2">2021-01-02</td>
+</tr>
+<tr class="odd">
+<td id="T_87c60_row14_col0" class="data row14 col0">15</td>
+<td id="T_87c60_row14_col1" class="data row14 col1">B</td>
+<td id="T_87c60_row14_col2" class="data row14 col2">2021-01-03</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -545,51 +529,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell-output cell-output-display" data-execution_count="4">
 
 
-<table id="T_a73e3" class="dataframe table-hover table table-sm table-striped">
-  <thead>
-    <tr>
-      <th id="T_a73e3_level0_col0" class="col_heading level0 col0">Date</th>
-      <th id="T_a73e3_level0_col1" class="col_heading level0 col1">Region</th>
-      <th id="T_a73e3_level0_col2" class="col_heading level0 col2">Cases</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="T_a73e3_row0_col0" class="data row0 col0">2021-01-01</td>
-      <td id="T_a73e3_row0_col1" class="data row0 col1">A</td>
-      <td id="T_a73e3_row0_col2" class="data row0 col2">1</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row1_col0" class="data row1 col0">2021-01-01</td>
-      <td id="T_a73e3_row1_col1" class="data row1 col1">B</td>
-      <td id="T_a73e3_row1_col2" class="data row1 col2">2</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row2_col0" class="data row2 col0">2021-01-02</td>
-      <td id="T_a73e3_row2_col1" class="data row2 col1">A</td>
-      <td id="T_a73e3_row2_col2" class="data row2 col2">4</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row3_col0" class="data row3 col0">2021-01-02</td>
-      <td id="T_a73e3_row3_col1" class="data row3 col1">B</td>
-      <td id="T_a73e3_row3_col2" class="data row3 col2">1</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row4_col0" class="data row4 col0">2021-01-03</td>
-      <td id="T_a73e3_row4_col1" class="data row4 col1">A</td>
-      <td id="T_a73e3_row4_col2" class="data row4 col2">2</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row5_col0" class="data row5 col0">2021-01-03</td>
-      <td id="T_a73e3_row5_col1" class="data row5 col1">B</td>
-      <td id="T_a73e3_row5_col2" class="data row5 col2">4</td>
-    </tr>
-    <tr>
-      <td id="T_a73e3_row6_col0" class="data row6 col0">2021-01-05</td>
-      <td id="T_a73e3_row6_col1" class="data row6 col1">B</td>
-      <td id="T_a73e3_row6_col2" class="data row6 col2">1</td>
-    </tr>
-  </tbody>
+<table id="T_b4621" class="dataframe table-hover table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th id="T_b4621_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Date</th>
+<th id="T_b4621_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Region</th>
+<th id="T_b4621_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_b4621_row0_col0" class="data row0 col0">2021-01-01</td>
+<td id="T_b4621_row0_col1" class="data row0 col1">B</td>
+<td id="T_b4621_row0_col2" class="data row0 col2">2</td>
+</tr>
+<tr class="even">
+<td id="T_b4621_row1_col0" class="data row1 col0">2021-01-02</td>
+<td id="T_b4621_row1_col1" class="data row1 col1">A</td>
+<td id="T_b4621_row1_col2" class="data row1 col2">1</td>
+</tr>
+<tr class="odd">
+<td id="T_b4621_row2_col0" class="data row2 col0">2021-01-02</td>
+<td id="T_b4621_row2_col1" class="data row2 col1">B</td>
+<td id="T_b4621_row2_col2" class="data row2 col2">3</td>
+</tr>
+<tr class="even">
+<td id="T_b4621_row3_col0" class="data row3 col0">2021-01-03</td>
+<td id="T_b4621_row3_col1" class="data row3 col1">A</td>
+<td id="T_b4621_row3_col2" class="data row3 col2">1</td>
+</tr>
+<tr class="odd">
+<td id="T_b4621_row4_col0" class="data row4 col0">2021-01-03</td>
+<td id="T_b4621_row4_col1" class="data row4 col1">B</td>
+<td id="T_b4621_row4_col2" class="data row4 col2">2</td>
+</tr>
+<tr class="even">
+<td id="T_b4621_row5_col0" class="data row5 col0">2021-01-04</td>
+<td id="T_b4621_row5_col1" class="data row5 col1">B</td>
+<td id="T_b4621_row5_col2" class="data row5 col2">1</td>
+</tr>
+<tr class="odd">
+<td id="T_b4621_row6_col0" class="data row6 col0">2021-01-05</td>
+<td id="T_b4621_row6_col1" class="data row6 col1">A</td>
+<td id="T_b4621_row6_col2" class="data row6 col2">2</td>
+</tr>
+<tr class="even">
+<td id="T_b4621_row7_col0" class="data row7 col0">2021-01-05</td>
+<td id="T_b4621_row7_col1" class="data row7 col1">B</td>
+<td id="T_b4621_row7_col2" class="data row7 col2">3</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -609,115 +598,116 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="5">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th>Temperature</th>
-      <th>NO₂</th>
-      <th>Fungal Sp. 1</th>
-      <th>Bacterial Sp. 2</th>
-      <th>Cases</th>
-    </tr>
-    <tr>
-      <th>Region</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">A</th>
-      <th>2021-01-01</th>
-      <td>15.31</td>
-      <td>5.12</td>
-      <td>981</td>
-      <td>758</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2021-01-02</th>
-      <td>20.83</td>
-      <td>3.09</td>
-      <td>1086</td>
-      <td>782</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2021-01-03</th>
-      <td>22.09</td>
-      <td>4.66</td>
-      <td>903</td>
-      <td>801</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2021-01-04</th>
-      <td>25.52</td>
-      <td>4.47</td>
-      <td>823</td>
-      <td>716</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2021-01-05</th>
-      <td>27.61</td>
-      <td>4.41</td>
-      <td>1059</td>
-      <td>763</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">B</th>
-      <th>2021-01-01</th>
-      <td>20.98</td>
-      <td>5.58</td>
-      <td>1008</td>
-      <td>692</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2021-01-02</th>
-      <td>18.13</td>
-      <td>4.02</td>
-      <td>1206</td>
-      <td>779</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2021-01-03</th>
-      <td>17.26</td>
-      <td>5.11</td>
-      <td>879</td>
-      <td>748</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2021-01-04</th>
-      <td>21.32</td>
-      <td>5.40</td>
-      <td>1124</td>
-      <td>882</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2021-01-05</th>
-      <td>18.66</td>
-      <td>5.42</td>
-      <td>897</td>
-      <td>660</td>
-      <td>1</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Temperature</th>
+<th data-quarto-table-cell-role="th">NO₂</th>
+<th data-quarto-table-cell-role="th">Fungal Sp. 1</th>
+<th data-quarto-table-cell-role="th">Bacterial Sp. 2</th>
+<th data-quarto-table-cell-role="th">Cases</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="5" data-quarto-table-cell-role="th" data-valign="top">A</td>
+<td data-quarto-table-cell-role="th">2021-01-01</td>
+<td>15.31</td>
+<td>5.12</td>
+<td>981</td>
+<td>758</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2021-01-02</td>
+<td>20.83</td>
+<td>3.09</td>
+<td>1086</td>
+<td>782</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2021-01-03</td>
+<td>22.09</td>
+<td>4.66</td>
+<td>903</td>
+<td>801</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2021-01-04</td>
+<td>25.52</td>
+<td>4.47</td>
+<td>823</td>
+<td>716</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2021-01-05</td>
+<td>27.61</td>
+<td>4.41</td>
+<td>1059</td>
+<td>763</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td rowspan="5" data-quarto-table-cell-role="th" data-valign="top">B</td>
+<td data-quarto-table-cell-role="th">2021-01-01</td>
+<td>20.98</td>
+<td>5.58</td>
+<td>1008</td>
+<td>692</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2021-01-02</td>
+<td>18.13</td>
+<td>4.02</td>
+<td>1206</td>
+<td>779</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2021-01-03</td>
+<td>17.26</td>
+<td>5.11</td>
+<td>879</td>
+<td>748</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2021-01-04</td>
+<td>21.32</td>
+<td>5.40</td>
+<td>1124</td>
+<td>882</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2021-01-05</td>
+<td>18.66</td>
+<td>5.42</td>
+<td>897</td>
+<td>660</td>
+<td>1</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -753,9 +743,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -871,6 +875,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -926,6 +1016,9 @@ innovation programme under the Marie Skłodowska-Curie grant agreement No. 81354
   </li>  
 </ul>
     </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <i class="fa-brands fa-python" aria-label="python"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/helical-itn/helical-itn.github.io">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
   </div>
 </footer>
