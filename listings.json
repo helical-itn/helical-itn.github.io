@@ -2,6 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/barcelona_meeting.html",
       "/blog/posts/esr6_data_example.html"
     ]
   }
