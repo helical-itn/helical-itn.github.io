@@ -8,6 +8,12 @@ The project has produced a number of reports and deliverables. These are listed 
 
 + [D1.2 Statistical Software Package and code](assets/deliverables/1.2%20Statistical%20Software%20Package%20and%20Code.pdf)
 
++ [D1.4 WP1 Summary Report](assets/deliverables/D1.4%20WP1%20Summary%20Report.pdf)
+
++ [D2.5 WP2 Summary Report](assets/deliverables/D2.5%20WP2%20Report%20Summary.pdf)
+
++ [D3.7 WP3 Summary Report](assets/deliverables/D3.7%20WP%203%20Summary%20Report.pdf)
+
 + [D4.1 Data Management Plan.](assets/deliverables/D4.1%20HELICAL%20DMP.pdf)
 
 + [D4.2 Information Governance Policies](assets/deliverables/4.2%20Information%20Governance%20Policies.pdf)
@@ -17,3 +23,4 @@ The project has produced a number of reports and deliverables. These are listed 
 + [D4.4 Proposed governance framework for research in rare diseases.](assets/deliverables/HELICAL%20D%204.4%20-%20Proposed%20Governance%20Framework.pdf)
 
 + [D6.7 Open Data Research Pilot](assets/deliverables/6.7%20Open%20Data%20Research%20Pilot.pdf)
++  [D6.8 Final Report](assets/deliverables/D6.8%20Final%20Report.pdf)
