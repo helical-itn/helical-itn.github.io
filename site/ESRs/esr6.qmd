@@ -39,7 +39,6 @@ His PhD project consists on:
 
 (3) developing and improving the characterization methods of biological aerosol particles via the use of machine learning methods.
 
-
 ---
 
 Check the video below to see a 15 second explanation of Alejandro's project by himself:
